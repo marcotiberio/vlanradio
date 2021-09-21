@@ -14,9 +14,10 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   height: 100%;
-  line-height: 1.625;
+  line-height: 1.2;
   -ms-overflow-style: -ms-autohiding-scrollbar;
   overflow-wrap: break-word;
+  text-transform: uppercase;
   word-wrap: break-word;
 
 
@@ -61,7 +62,7 @@ h1,
   padding-top: 2rem;
 
   @media (min-width: $breakpoint-mobile-horizontal) {
-    font-size: 2.75rem;
+    font-size: 13.25rem;
   }
 }
 
@@ -123,6 +124,7 @@ p,
 .paragraph,
 table,
 figure {
+  font-size: 20px;
   margin: 0 0 1.2rem;
 }
 

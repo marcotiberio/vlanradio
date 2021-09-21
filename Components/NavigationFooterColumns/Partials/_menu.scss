@@ -1,0 +1,58 @@
+.list {
+  @include reset-list;
+  @include grid(2);
+
+  &--col1 {
+    @include reset-grid;
+  }
+
+  @media (min-width: $breakpoint-tablet) {
+    padding-right: 5%;
+  }
+
+  @media (min-width: $breakpoint-tablet-horizontal) {
+    &--col3 {
+      @include grid(3);
+    }
+
+    &--col4 {
+      @include grid(4);
+    }
+  }
+
+  &-item {
+    @include reset-content-margins;
+
+    @media (min-width: $breakpoint-tablet-horizontal) {
+      max-width: 240px;
+    }
+  }
+
+  &-link {
+    color: $color-text;
+  }
+
+  &-titleLink,
+  &-link {
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      color: $color-accent;
+    }
+  }
+
+  .childList {
+    @include reset-list;
+
+    &-item {
+      line-height: 1.625;
+      margin: 0;
+      padding: 0 0 0.5rem;
+
+      &:last-child {
+        padding-bottom: 0;
+      }
+    }
+  }
+}

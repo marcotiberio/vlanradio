@@ -5,6 +5,9 @@
         {% include 'Partials/_menu.twig' with { 'items': menu.get_items, 'level': '0', 'maxLevel': maxLevel } only %}
       </nav>
     {% endif %}
+    {% if contentCenterHtml %}
+      <div class="content">{{ contentCenterHtml|e('wp_kses_post') }}</div>
+    {% endif %}
     {% if contentHtml %}
       <div class="content">{{ contentHtml|e('wp_kses_post') }}</div>
     {% endif %}

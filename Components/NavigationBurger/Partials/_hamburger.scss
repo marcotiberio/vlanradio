@@ -3,7 +3,6 @@
   display: block;
   height: 18px;
   position: relative;
-  width: 30px;
 
   &::before,
   &::after {
@@ -14,14 +13,14 @@
   &::after,
   &-barPrimary,
   &-barSecondary {
-    background-color: $color-accent;
+    background-color: $black;
     display: block;
-    height: 2px;
-    left: 0;
+    height: 3px;
     position: absolute;
+    right: 0;
     transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out,
       background-color 0.2s ease-in-out;
-    width: 30px;
+    width: 40px;
   }
 
   &::before {
@@ -30,11 +29,11 @@
 
   &-barPrimary,
   &-barSecondary {
-    top: 8px;
+    top: 7px;
   }
 
   &::after {
-    top: 16px;
+    top: 13px;
   }
 }
 

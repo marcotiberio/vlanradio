@@ -28,13 +28,28 @@ Options::addTranslatable('NavigationFooter', [
         'endpoint' => 0
     ],
     [
-        'label' => __('Content', 'flynt'),
+        'label' => __('Content Left', 'flynt'),
         'name' => 'contentHtml',
         'type' => 'wysiwyg',
         'media_upload' => 0,
         'delay' => 1,
         'toolbar' => 'basic',
-        'default_value' => '©&nbsp;[year] [sitetitle]'
+        'default_value' => '©&nbsp;[year] [sitetitle]',
+        'wrapper' => [
+            'width' => 50
+        ],
+    ],
+    [
+        'label' => __('Content Center', 'flynt'),
+        'name' => 'contentCenterHtml',
+        'type' => 'wysiwyg',
+        'media_upload' => 0,
+        'delay' => 1,
+        'toolbar' => 'basic',
+        'default_value' => 'VLAN (Vienna Local Artist Network) is a non-commercial online radio project founded in October 2020.',
+        'wrapper' => [
+            'width' => 50
+        ],
     ],
     [
         'label' => __('Content Examples', 'flynt'),

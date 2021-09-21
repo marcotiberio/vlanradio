@@ -31,7 +31,7 @@
   }
 
   &-link {
-    color: $color-text;
+    color: $green;
     display: block;
     font-size: 1rem;
     font-weight: 700;
@@ -41,12 +41,26 @@
     transition: color 0.2s ease-out;
 
     &:focus {
-      color: $color-accent;
+      color: $green;
     }
 
     @media (min-width: $breakpoint-tablet) {
       padding-left: $container-padding-tablet;
       padding-right: $container-padding-tablet;
+    }
+
+    &-live {
+      align-items: center;
+      color: $black;
+      display: flex;
+      padding: 0;
+      width: 30vw;
+
+      &::before {
+        content: '⬤';
+        font-size: 8px;
+        margin-right: 10px;
+      }
     }
   }
 }
