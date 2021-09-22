@@ -1,14 +1,31 @@
 [is='flynt-block-post-header'] {
-  .meta {
-    font-size: 14px;
-  }
-
-  .excerpt {
-    color: $color-text;
-    font-weight: normal;
+  .meta-category {
+    color: $green;
+    font-size: 20px;
+    text-decoration: none;
   }
 
   .featuredImage {
-    margin: 2.5rem 0;
+    margin-bottom: $container-padding * 2;
+  }
+
+  .content {
+    .episode-header {
+      display: flex;
+      flex-flow: row wrap;
+      gap: 175px;
+      justify-content: flex-start;
+
+
+      &-title {
+        color: $green;
+        width: fit-content;
+      }
+    }
+
+    .excerpt {
+      color: $green;
+      font-weight: normal;
+    }
   }
 }

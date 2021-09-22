@@ -1,23 +1,26 @@
 <div class="flyntComponent" is="flynt-block-post-header">
-  <div class="container centerMaxWidthContainer">
-    <div class="content centerContentMaxWidth">
-      <h1>{{ post.title }}</h1>
-      <div class="meta">
+  <div class="container fullWidthContainer">
+    {% if post.thumbnail %}
+      <div class="featuredImage">
+        {{ renderComponent('BlockImage', { image: post.thumbnail, noComponentSpacing: true }) }}
+      </div>
+    {% endif %}
+    <div class="content centerMaxWidthContainer">
+      <div class="episode-header">
+        <a class="episode-header-category meta-category" href="{{ post.category.link|e('esc_url') }}"><span class="visuallyHidden">{{ __("Category:", "flynt") }}</span> {{ post.category }}</a>
+        <p class="episode-header-title">{{ post.title }}</p>
+      </div>
+      {# <div class="meta">
         {% if post.date %}
           <time class="meta-date" datetime="{{ post.post_date }}">{{ post.date|date }}</time> {{ dividers.authorDivider|e }}
         {% endif %}
         {{ labels.postedByLabel|e }} <a class="meta-author" href="{{ post.author.link|e('esc_url') }}"><span class="visuallyHidden">{{ __("Author:", "flynt") }}</span> {{ post.author.name }}</a>
-        {{ labels.postedInLabel|e }} <a class="meta-category" href="{{ post.category.link|e('esc_url') }}"><span class="visuallyHidden">{{ __("Category:", "flynt") }}</span> {{ post.category }}</a>
+        <a class="meta-category" href="{{ post.category.link|e('esc_url') }}"><span class="visuallyHidden">{{ __("Category:", "flynt") }}</span> {{ post.category }}</a>
         {{ dividers.readingtimeDivider|e }} <span class="meta-readingtime">{{ post.content|readingtime }} {{ labels.readingtimeLabel|e }}</span>
-      </div>
-      {% if post.post_excerpt %}
+      </div> #}
+      {# {% if post.post_excerpt %}
         <p class="excerpt h3">{{ post.post_excerpt }}</p>
-      {% endif %}
+      {% endif %} #}
     </div>
   </div>
-  {% if post.thumbnail %}
-    <div class="featuredImage">
-      {{ renderComponent('BlockImage', { image: post.thumbnail, options: { size: 'sizeLarge' }, noComponentSpacing: true }) }}
-    </div>
-  {% endif %}
 </div>

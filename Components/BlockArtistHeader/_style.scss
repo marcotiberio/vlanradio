@@ -1,0 +1,61 @@
+[is='flynt-block-artist-header'] {
+  .meta-category {
+    color: $green;
+    font-size: 20px;
+    text-decoration: none;
+  }
+
+  .featuredImage {
+    margin-bottom: $container-padding * 2;
+  }
+
+  .content {
+    .episode-header {
+      display: flex;
+      flex-flow: row wrap;
+      gap: 175px;
+      justify-content: flex-start;
+
+
+      &-title {
+        color: $green;
+        width: fit-content;
+      }
+    }
+
+    .artist-bio {
+      .preTitle {
+        margin-bottom: 0;
+        margin-left: -12px;
+        padding-top: 0;
+      }
+
+      .excerpt {
+        color: $green;
+        font-weight: normal;
+      }
+
+      p {
+        color: $green;
+      }
+    }
+
+    .tags {
+      // @include reset-list;
+      display: flex;
+      flex-flow: row wrap;
+      gap: $container-padding;
+      margin-bottom: $component-spacing * 2;
+      margin-top: $component-spacing * 2;
+      padding-left: 0;
+  
+      &-item {
+        display: inline-block;
+  
+        &Link {
+          color: $green;
+        }
+      }
+    }
+  }
+}

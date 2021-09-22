@@ -2,15 +2,15 @@
   <div class="container centerMaxWidthContainer">
     <div class="columns">
       {% if contentHtml %}
-        <div class="columns-left">{{ contentHtml|e('wp_kses_post') }}</div>
+        <div class="columns-left col">{{ contentHtml|e('wp_kses_post') }}</div>
       {% endif %}
       {% if contentRightsHtml %}
-        <div class="columns-center">{{ contentRightsHtml|e('wp_kses_post') }}</div>
+        <div class="columns-center col">{{ contentRightsHtml|e('wp_kses_post') }}</div>
       {% endif %}
       {# <div class="logo">
         <img class="logo-image" src="{{ logo.src }}" alt="{{ logo.alt }}">
       </div> #}
-      <div class="columns-right social">
+      <div class="columns-right social col">
         {% if social %}
           <ul class="socialList">
             {% for socials in social %}

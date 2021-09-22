@@ -1,0 +1,17 @@
+{% extends 'templates/_document.twig' %}
+
+{% block content %}
+  <article class="post">
+    <header class="post-header">
+      {{ renderComponent('BlockArtistHeader', { post: post }) }}
+    </header>
+    <section class="post-main">
+      {% for component in post.meta('artistComponents') %}
+        {{ renderComponent(component) }}
+      {% endfor %}
+    </section>
+    <footer class="post-header">
+      {{ renderComponent('BlockArtistFooter', { post: post }) }}
+    </footer>
+  </article>
+{% endblock %}

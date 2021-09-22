@@ -13,15 +13,19 @@
   }
 
   .columns {
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    column-gap: 0;
+    display: grid;
+    grid-auto-rows: auto;
+    grid-template-columns: 1fr;
+    row-gap: 0.5rem;
     width: 100%;
 
     @media (min-width: $breakpoint-tablet-horizontal) {
-      align-items: stretch;
-      flex-direction: row;
+      column-gap: $container-padding;
+      display: grid;
+      grid-template-columns: 1fr 3fr 1fr;
+      grid-template-rows: 1fr;
+      row-gap: 0;
       width: 100%;
     }
 
@@ -38,29 +42,7 @@
   .socialList {
     @include reset-list;
     display: flex;
-    justify-content: center;
-
-    @media (min-width: $breakpoint-tablet) {
-      justify-content: flex-end;
-    }
-
-    svg {
-      transition: color 0.2s ease;
-    }
-
-    &-link {
-      box-sizing: content-box;
-      display: block;
-      height: 16px;
-      padding: 6px;
-
-      &:hover,
-      &:focus {
-        svg {
-          color: $color-accent;
-        }
-      }
-    }
+    justify-content: flex-start;
 
     &-item {
       display: inline-block;
@@ -70,12 +52,26 @@
       }
     }
 
-    svg {
-      color: $color-text;
+    &-link {
+      box-sizing: content-box;
       display: block;
-      height: 100%;
-      max-width: 20px;
-      width: auto;
+      height: 16px;
+
+      &:hover,
+      &:focus {
+        svg {
+          color: $color-accent;
+        }
+      }
+
+      svg {
+        color: $color-text;
+        display: block;
+        height: 100%;
+        max-width: 20px;
+        transition: color 0.2s ease;
+        width: auto;
+      }
     }
   }
 }

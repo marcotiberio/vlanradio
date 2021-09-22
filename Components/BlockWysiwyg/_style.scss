@@ -1,4 +1,6 @@
 [is='flynt-block-wysiwyg'] {
+  color: $green;
+
   .content {
     @include reset-content-margins;
     text-align: inherit;

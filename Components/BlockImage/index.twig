@@ -1,4 +1,4 @@
-<div class="flyntComponent flyntComponent--{{ options.size }} {{ options.theme }} {{ noComponentSpacing == true ? '' : 'componentSpacing' }}" is="flynt-block-image">
+<div class="flyntComponent {{ noComponentSpacing == true ? '' : 'componentSpacing' }}" is="flynt-block-image">
   <div class="container{% if options.size != 'sizeFull' %} centerMaxWidthContainer{% endif %}">
     <figure class="figure">
       {% set gif = image.post_mime_type == 'image/gif' %}

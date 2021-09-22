@@ -69,10 +69,11 @@
   .logo {
     display: block;
     height: 100%;
+    width: 100vw;
 
     &-image {
       height: 100%;
-      width: auto;
+      width: 100%;
     }
   }
 }

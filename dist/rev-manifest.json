@@ -1,4 +1,11 @@
 {
+  "Components/ListSocialArtist/Assets/facebook.svg": "Components/ListSocialArtist/Assets/facebook-59680163b5.svg",
+  "Components/ListSocialArtist/Assets/instagram.svg": "Components/ListSocialArtist/Assets/instagram-16d4019372.svg",
+  "Components/ListSocialArtist/Assets/linkedin.svg": "Components/ListSocialArtist/Assets/linkedin-9bcc5778c4.svg",
+  "Components/ListSocialArtist/Assets/mail.svg": "Components/ListSocialArtist/Assets/mail-4b76b6943d.svg",
+  "Components/ListSocialArtist/Assets/twitter.svg": "Components/ListSocialArtist/Assets/twitter-65b7f849b2.svg",
+  "Components/ListSocialArtist/Assets/xing.svg": "Components/ListSocialArtist/Assets/xing-d0faa4294a.svg",
+  "Components/ListSocialArtist/Assets/youtube.svg": "Components/ListSocialArtist/Assets/youtube-5ed41aaa24.svg",
   "Components/NavigationBurger/Assets/logo.svg": "Components/NavigationBurger/Assets/logo-784931f932.svg",
   "Components/NavigationFooterColumns/Assets/facebook.svg": "Components/NavigationFooterColumns/Assets/facebook-3bed8611a1.svg",
   "Components/NavigationFooterColumns/Assets/instagram.svg": "Components/NavigationFooterColumns/Assets/instagram-22204c7483.svg",
@@ -23,7 +30,7 @@
   "assets/fonts/UniversLT67BoldCondensed.woff2": "assets/fonts/UniversLT67BoldCondensed-bf9dfcde13.woff2",
   "assets/icons/check-circle.svg": "assets/icons/check-circle-98401bcdb9.svg",
   "assets/icons/spinner.svg": "assets/icons/spinner-2e5c842fc5.svg",
-  "assets/main.css": "assets/main-0f68edf5c5.css",
+  "assets/main.css": "assets/main-8ca2e80e91.css",
   "assets/main.js": "assets/main-64d54d0847.js",
   "assets/main.js.LICENSE.txt": "assets/main-957f80e714.js.LICENSE.txt"
 }

@@ -44,9 +44,8 @@ function getACFLayout()
             ],
             [
                 'label' => __('Title', 'flynt'),
-                'name' => 'preContentHtml',
-                'type' => 'wysiwyg',
-                'tabs' => 'visual,text',
+                'name' => 'preContent',
+                'type' => 'text',
                 'media_upload' => 0,
                 'delay' => 1,
                 'instructions' => __('Want to add a headline? And a paragraph? Go ahead! Or just leave it empty and nothing will be shown.', 'flynt'),
@@ -64,31 +63,6 @@ function getACFLayout()
                 'save_terms' => 0,
                 'load_terms' => 0,
                 'return_format' => 'object'
-            ],
-            [
-                'label' => __('Options', 'flynt'),
-                'name' => 'optionsTab',
-                'type' => 'tab',
-                'placement' => 'top',
-                'endpoint' => 0
-            ],
-            [
-                'label' => '',
-                'name' => 'options',
-                'type' => 'group',
-                'layout' => 'row',
-                'sub_fields' => [
-                    FieldVariables\getTheme(),
-                    [
-                        'label' => __('Columns', 'flynt'),
-                        'name' => 'columns',
-                        'type' => 'number',
-                        'default_value' => 3,
-                        'min' => 1,
-                        'max' => 4,
-                        'step' => 1
-                    ]
-                ]
             ],
         ]
     ];

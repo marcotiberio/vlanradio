@@ -1,19 +1,25 @@
 [is='flynt-navigation-footer'] {
   .container {
+    display: grid;
+    grid-auto-rows: auto;
+    grid-template-columns: 1fr;
     padding-bottom: $component-spacing-mobile;
     padding-top: $component-spacing-mobile;
+    row-gap: $container-padding;
     text-align: left;
 
-    @media (min-width: $breakpoint-tablet) {
-      display: flex;
-      flex-direction: row-reverse;
-      justify-content: space-between;
+    @media (min-width: $breakpoint-tablet-horizontal) {
+      column-gap: $container-padding;
+      display: grid;
+      grid-template-columns: 1fr 3fr 1fr;
+      grid-template-rows: 1fr;
+      row-gap: 0;
     }
   }
 
   .content {
     @include reset-content-margins;
-    margin: 10px 0 0;
+    margin: 0;
 
     @media (min-width: $breakpoint-tablet) {
       margin: 0;

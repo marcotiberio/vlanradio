@@ -31,15 +31,15 @@ Options::addTranslatable('BlockPostHeader', [
                     'width' => '50',
                 ],
             ],
-            [
-                'label' => __('(Posted) in', 'flynt'),
-                'name' => 'postedInLabel',
-                'type' => 'text',
-                'default_value' => 'in',
-                'wrapper' => [
-                    'width' => '50',
-                ],
-            ],
+            // [
+            //     'label' => __('(Posted) in', 'flynt'),
+            //     'name' => 'postedInLabel',
+            //     'type' => 'text',
+            //     'default_value' => 'in',
+            //     'wrapper' => [
+            //         'width' => '50',
+            //     ],
+            // ],
             [
                 'label' => __('Reading Time - (20) min read', 'flynt'),
                 'name' => 'readingtimeLabel',

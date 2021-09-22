@@ -1,41 +1,25 @@
 [is='flynt-block-post-footer'] {
+  margin-bottom: $component-spacing * 2;
+
+  .excerpt {
+    color: $green;
+  }
+
   .tags {
-    @include reset-list;
+    // @include reset-list;
+    display: flex;
+    flex-flow: row wrap;
+    gap: $container-padding;
+    margin-bottom: $component-spacing * 2;
+    margin-top: $component-spacing * 2;
+    padding-left: 0;
 
     &-item {
       display: inline-block;
-      margin-top: 5px;
-    }
-  }
 
-  .author {
-    display: flex;
-    margin: 3rem 0;
-
-    &-avatarLink {
-      flex-shrink: 0;
-    }
-
-    &-avatarImage {
-      border-radius: 50%;
-      width: 80px;
-    }
-
-    &-info {
-      display: flex;
-      flex: 1;
-      flex-direction: column;
-      justify-content: center;
-      padding-left: 1rem;
-
-      @media (min-width: $breakpoint-mobile-horizontal) {
-        padding-left: 2rem;
+      &Link {
+        color: $green;
       }
-    }
-
-    &-description {
-      font-size: 14px;
-      margin: 0.5rem 0 0;
     }
   }
 }
