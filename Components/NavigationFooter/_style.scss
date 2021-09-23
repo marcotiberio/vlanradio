@@ -1,19 +1,52 @@
 [is='flynt-navigation-footer'] {
+  p {
+    color: $black;
+  }
+
   .container {
-    display: grid;
-    grid-auto-rows: auto;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-flow: row wrap;
     padding-bottom: $component-spacing-mobile;
     padding-top: $component-spacing-mobile;
     row-gap: $container-padding;
     text-align: left;
 
+    .col-1 {
+      order: 1;
+      width: 50%;
+    }
+
+    .col-2 {
+      order: 3;
+      width: 100%;
+    }
+
+    .col-3 {
+      order: 2;
+      width: 50%;
+    }
+
     @media (min-width: $breakpoint-tablet-horizontal) {
       column-gap: $container-padding;
       display: grid;
-      grid-template-columns: 1fr 3fr 1fr;
+      grid-template-columns: calc(25% - 30px) 50% calc(25% - 30px);
       grid-template-rows: 1fr;
       row-gap: 0;
+
+      .col-1 {
+        order: 1;
+        width: 100%;
+      }
+
+      .col-2 {
+        order: 2;
+        width: 100%;
+      }
+
+      .col-3 {
+        order: 3;
+        width: 100%;
+      }
     }
   }
 

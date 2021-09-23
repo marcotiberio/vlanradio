@@ -1,8 +1,11 @@
 
 <div class="flyntComponent componentSpacing {{ options.theme }}" is="flynt-grid-posts-archive">
   <div class="container centerMaxWidthContainer">
+    <div class="preContent preContent-label">
+      <p>Genre</p>
+    </div>
     <div class="preContent">
-      <h1>{{ title }}</h1>
+      <p>{{ title }}</p>
       {% set html = isHome ? preContentHtml : description %}
       {{ html|e('wp_kses_post') }}
     </div>
@@ -33,11 +36,19 @@
             {% endif %}
           </a>
           <div class="post-inner">
-            <h2 class="h3 post-title">{{ post.title }}</h2>
-            <p class="post-excerpt">{{ post.preview.read_more(false) }}</p>
+            <p class="post-title">{{ post.title }}</p>
+            <a class="episode-header-category meta-category" href="{{ post.category.link|e('esc_url') }}"><span class="visuallyHidden">{{ __("Category:", "flynt") }}</span> {{ post.category }}</a>
+            {% if post.terms('tag')  %}
+              <ul class="tags">
+                {% for tag in post.terms('tag')  %}
+                  <li class="tags-item"><a class="tags-itemLink" href="{{ tag.link }}"><span class="visuallyHidden">{{ __("Tag:", "flynt") }}</span> {{ tag }}</a></li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+            {# <p class="post-excerpt">{{ post.preview.read_more(false) }}</p>
             <a class="button button--link" href="{{ post.link }}" title="{{ post.title }}" aria-hidden="true" tabindex="-1">
               {{ labels.readMore }}
-            </a>
+            </a> #}
           </div>
         </li>
       {% else %}

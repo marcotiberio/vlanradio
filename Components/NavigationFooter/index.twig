@@ -1,13 +1,13 @@
 <div class="flyntComponent themeLight" is="flynt-navigation-footer">
   <div class="container centerMaxWidthContainer">
     {% if contentHtml %}
-      <div class="content col">{{ contentHtml|e('wp_kses_post') }}</div>
+      <div class="content col col-1">{{ contentHtml|e('wp_kses_post') }}</div>
     {% endif %}
     {% if contentCenterHtml %}
-      <div class="content col">{{ contentCenterHtml|e('wp_kses_post') }}</div>
+      <div class="content col col-2">{{ contentCenterHtml|e('wp_kses_post') }}</div>
     {% endif %}
     {% if menu %}
-      <nav class="navigation col" aria-label="{{ __("Footer", "flynt") }}">
+      <nav class="navigation col col-3" aria-label="{{ __("Footer", "flynt") }}">
         {% include 'Partials/_menu.twig' with { 'items': menu.get_items, 'level': '0', 'maxLevel': maxLevel } only %}
       </nav>
     {% endif %}

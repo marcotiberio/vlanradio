@@ -1,0 +1,73 @@
+[is='flynt-block-episode-select'] {
+  margin: 0;
+
+  .preContent {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .grid {
+    @include reset-list;
+    display: flex;
+    flex-flow: row wrap;
+    height: 100%;
+  }
+
+  .grid-item {
+    width: 100%;
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      width: 100%;
+
+      .episode-header-labels {
+        border-bottom: 1px solid $green;
+        display: grid;
+        grid-template-columns: 25% 50% 25%;
+        margin-bottom: $container-padding;
+        padding: $container-padding 0 0 0;
+
+        @media (max-width: $breakpoint-mobile-horizontal) {
+          column-gap: $container-padding / 2;
+          grid-template-columns: 1fr 1fr 1fr;
+          padding: $container-padding 0;
+        }
+  
+        p {
+          opacity: 0.5;
+        }
+      }
+
+      .episode-header {
+        display: grid;
+        grid-template-columns: 25% 50% 25%;
+
+        @media (max-width: $breakpoint-mobile-horizontal) {
+          column-gap: $container-padding / 2;
+          grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        .tags {
+          // @include reset-list;
+          display: flex;
+          flex-flow: row wrap;
+          gap: $container-padding;
+          justify-content: flex-start;
+          padding-left: 0;
+      
+          &-item {
+            display: inline-block;
+      
+            &Link {
+              color: $green;
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

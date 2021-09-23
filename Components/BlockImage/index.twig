@@ -1,5 +1,5 @@
-<div class="flyntComponent {{ noComponentSpacing == true ? '' : 'componentSpacing' }}" is="flynt-block-image">
-  <div class="container{% if options.size != 'sizeFull' %} centerMaxWidthContainer{% endif %}">
+<div class="flyntComponent componentSpacing" is="flynt-block-image">
+  <div class="container fullWidthContainer">
     <figure class="figure">
       {% set gif = image.post_mime_type == 'image/gif' %}
       <img class="figure-image {{ not gif ? 'lazyload' }}"

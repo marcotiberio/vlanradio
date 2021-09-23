@@ -1,31 +1,48 @@
 [is='flynt-block-post-header'] {
-  .meta-category {
-    color: $green;
-    font-size: 20px;
-    text-decoration: none;
-  }
+  border-bottom: 1px solid $green;
 
   .featuredImage {
     margin-bottom: $container-padding * 2;
   }
 
-  .content {
-    .episode-header {
-      display: flex;
-      flex-flow: row wrap;
-      gap: 175px;
-      justify-content: flex-start;
+  // .meta-category {
+  //   color: $green;
+  //   font-size: 20px;
+  //   text-decoration: none;
+  // }
+
+  // .content {
+  //   .episode-header {
+  //     display: grid;
+  //     grid-template-columns: repeat(3, 1fr);      
 
 
-      &-title {
-        color: $green;
-        width: fit-content;
-      }
-    }
+  //     &-title {
+  //       color: $green;
+  //       width: fit-content;
+  //     }
 
-    .excerpt {
-      color: $green;
-      font-weight: normal;
-    }
-  }
+  //     .tags {
+  //       // @include reset-list;
+  //       display: flex;
+  //       flex-flow: row wrap;
+  //       gap: $container-padding;
+  //       padding-left: 0;
+    
+  //       &-item {
+  //         display: inline-block;
+    
+  //         &Link {
+  //           color: $green;
+  //           text-decoration: none;
+  //         }
+  //       }
+  //     }
+  //   }
+
+  //   .excerpt {
+  //     color: $green;
+  //     font-weight: normal;
+  //   }
+  // }
 }

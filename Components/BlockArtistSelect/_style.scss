@@ -1,0 +1,77 @@
+[is='flynt-block-artist-select'] {
+  margin: 0;
+
+  .preContent {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .grid {
+    @include reset-list;
+    display: flex;
+    flex-flow: row wrap;
+    height: 100%;
+  }
+
+  .grid-item {
+    width: 100%;
+
+    @media (min-width: $breakpoint-tablet-horizontal) {
+      width: 50%;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      height: 100%;
+
+      &-header {
+        align-items: flex-start;
+        background-color: $green;
+        display: flex;
+        flex-direction: row;
+        flex-grow: 1;
+        height: 160px;
+
+        @media (min-width: $breakpoint-tablet-horizontal) {
+          height: 260px;
+        }
+
+        &-image {
+          height: 100%;
+          object-fit: cover;
+          width: 50%;
+        }
+
+        &-inner {
+          background-color: $green;
+          height: 100%;
+          width: 50%;
+
+          h3 {
+            padding: 0;
+          }
+        }
+
+        &:hover {
+          cursor: pointer;
+          opacity: 0.8;
+        }
+
+      }
+
+      &-footer {
+        display: block;
+        margin: 0;
+
+        &-inner {
+          padding-left: 0;
+          padding-right: 0;
+          padding-top: 0;
+        }
+      }
+    }
+  }
+}

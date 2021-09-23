@@ -25,11 +25,11 @@
                     {{ item.thumbnail.src|resizeDynamic(312, 208) }} 312w"
                   data-sizes="auto"
                   alt="{{ item.thumbnail.alt|e }}">
-                <div class="content-inner noPadding">
-                  <p class="content-title pill">{{ item.title }}</p>
-                  <p class="content-title pill">{{ item.category }}</p>
-                </div>
               </a>
+              <div class="content-inner noPadding">
+                <p class="content-inner-title">{{ item.title }}</p>
+                <p class="content-inner-title">{{ item.category }}</p>
+              </div>
               {# <footer class="content-footer">
                 <span class="content-readingTime">
                   <i data-feather="clock"></i> {{ item.content | readingtime }} {{ labels.readingTime }}
@@ -41,7 +41,7 @@
         {% endfor %}
       </ul>
       <div class="allPostsLink">
-        <a href="{{ postTypeArchiveLink }}" class="button button--link">{{ labels.allPosts }}</a>
+        <a href="{{ postTypeArchiveLink }}" class="button button--link"><h1>{{ labels.allPosts }}</h1></a>
       </div>
     </div>
   </div>

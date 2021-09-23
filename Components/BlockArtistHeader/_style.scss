@@ -16,6 +16,10 @@
       gap: 175px;
       justify-content: flex-start;
 
+      @media (max-width: $breakpoint-mobile-horizontal) {
+        gap: 0;
+      }
+
 
       &-title {
         color: $green;
@@ -28,6 +32,10 @@
         margin-bottom: 0;
         margin-left: -12px;
         padding-top: 0;
+
+        @media (max-width: $breakpoint-mobile-horizontal) {
+          margin-left: 0;
+        }
       }
 
       .excerpt {

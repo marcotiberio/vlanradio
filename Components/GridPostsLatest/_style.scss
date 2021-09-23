@@ -2,13 +2,17 @@
   .preContent {
     margin-left: -12px;
     text-align: left;
+
+    @media (max-width: $breakpoint-mobile-horizontal) {
+      margin-left: 0;
+    }
   }
 
   .grid {
     @include reset-list;
     display: grid;
     grid-auto-rows: auto;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     height: fit-content;
   }
 
@@ -24,6 +28,7 @@
     &-image {
       background: $color-contrast;
       flex-shrink: 0; // IE11 bug fix (prevent image from stretchin')
+      margin-bottom: $container-padding;
     }
 
     &-inner {
@@ -35,8 +40,8 @@
         color: $green;
       }
 
-      .content-title {
-        margin-top: $container-padding;
+      .content-inner-title {
+        margin-top: $container-padding / 2;
       }
     }
 
@@ -71,11 +76,7 @@
   }
 
   .allPostsLink {
-    padding-top: 1.5rem;
-    text-align: center;
-
-    @media (min-width: $breakpoint-desktop) {
-      padding-top: 3rem;
-    }
+    border-top: 1px solid $green;
+    margin-top: $container-padding * 2;
   }
 }

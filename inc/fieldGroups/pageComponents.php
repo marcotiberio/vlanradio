@@ -16,8 +16,11 @@ add_action('Flynt/afterRegisterComponents', function () {
                 'button_label' => __('Add Component', 'flynt'),
                 'layouts' => [
                     Components\BlockCollapse\getACFLayout(),
+                    Components\BlockArtistSelect\getACFLayout(),
                     Components\BlockImage\getACFLayout(),
+                    Components\BlockEpisodeSelect\getACFLayout(),
                     Components\BlockImageText\getACFLayout(),
+                    Components\BlockInfoShow\getACFLayout(),
                     Components\BlockVideoOembed\getACFLayout(),
                     Components\BlockWysiwyg\getACFLayout(),
                     Components\GridImageText\getACFLayout(),

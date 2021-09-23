@@ -1,0 +1,31 @@
+{% if items|length > 0 %}
+  <div class="flyntComponent flyntComponent--flynt-block-episode-select componentSpacing" is="flynt-block-episode-select">
+    <hr>
+    <div class="container fullWidthContainer-noPaddingnoMargin">
+      <ul class="grid">
+        {% for item in items %}
+          <li class="grid-item">
+            <div class="content">
+              <div class="episode-header-labels">
+                <p class="episode-header-labels-category">Latest Episode</p>
+                <p class="episode-header-labels-artist">Artist</p>
+                <p class="episode-header-labels-tags">Genre</p>
+              </div>
+              <div class="episode-header">
+                <a class="content-title" href="{{ item.link }}" title="{{ item.title }}" aria-hidden="true" tabindex="-1">{{ item.title }}</a>
+                <p class="content-title">Artist</p>
+                <ul class="tags">
+                  {% for tag in item.terms('tag')  %}
+                    <li class="tags-item"><a class="tags-itemLink" href="{{ tag.link }}"><span class="visuallyHidden">{{ __("Tag:", "flynt") }}</span> {{ tag }}</a></li>
+                  {% endfor %}
+                </ul>
+              </div>
+              <div class="post-content">{{ item.content|e('wp_kses_post') }}</div>
+            </div>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+    <hr>
+  </div>
+{% endif %}
