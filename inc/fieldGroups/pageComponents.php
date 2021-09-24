@@ -15,12 +15,14 @@ add_action('Flynt/afterRegisterComponents', function () {
                 'type' => 'flexible_content',
                 'button_label' => __('Add Component', 'flynt'),
                 'layouts' => [
+                    Components\BlockArchiveEpisodeSelect\getACFLayout(),
                     Components\BlockCollapse\getACFLayout(),
                     Components\BlockArtistSelect\getACFLayout(),
                     Components\BlockImage\getACFLayout(),
-                    Components\BlockEpisodeSelect\getACFLayout(),
+                    Components\BlockLatestEpisodeSelect\getACFLayout(),
                     Components\BlockImageText\getACFLayout(),
                     Components\BlockInfoShow\getACFLayout(),
+                    Components\BlockPageSelect\getACFLayout(),
                     Components\BlockVideoOembed\getACFLayout(),
                     Components\BlockWysiwyg\getACFLayout(),
                     Components\GridImageText\getACFLayout(),
@@ -28,6 +30,7 @@ add_action('Flynt/afterRegisterComponents', function () {
                     Components\ListComponents\getACFLayout(),
                     Components\NavigationFooterColumns\getACFLayout(),
                     Components\SliderImages\getACFLayout(),
+                    Components\BlockPageLink\getACFLayout(),
                 ]
             ]
         ],

@@ -18,6 +18,11 @@
     flex-flow: row wrap;
     height: $navigation-height;
     justify-content: flex-start;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
 
     .menu-link-live {
       align-items: center;
@@ -25,9 +30,25 @@
       width: 23vw;
 
       &::before {
+        animation: none;
         content: '⬤';
         font-size: 10px;
         margin-right: 20px;
+      }
+
+      &1 {
+        &::before {
+          animation: blinker 1s linear infinite;
+          content: '⬤';
+          font-size: 10px;
+          margin-right: 20px;
+        }
+      }
+
+      @keyframes blinker {
+        50% {
+          opacity: 0;
+        }
       }
     }
 
@@ -36,34 +57,36 @@
       align-items: center;
       display: flex;
       justify-content: space-between;
-  
+
       &-item--current {
         .menu-link {
           color: $black;
+          text-decoration: underline;
         }
       }
-  
+
       &-link {
         color: $black;
         font-size: 20px;
         padding: 0 10px;
         text-decoration: none;
         transition: color 0.2s ease-out;
-  
+
         &:hover,
         &:focus {
           color: $color-accent;
+          text-decoration: underline;
         }
       }
     }
   }
 
-  .container {
+  .headerBottom {
     border-bottom: 1px solid $green;
     display: flex;
     height: 100%;
     justify-content: space-between;
-    margin: 0 $container-padding;
+    margin: $navigation-height $container-padding 0 $container-padding;
     padding-bottom: $container-padding;
     padding-top: $container-padding;
   }

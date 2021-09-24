@@ -22,6 +22,18 @@ add_filter('Flynt/addComponentData?name=NavigationMain', function ($data) {
     return $data;
 });
 
+Options::addGlobal('NavigationMain', [
+    [
+        'label' => __('Live Button', 'flynt'),
+        'name' => 'onAir',
+        'type' => 'true_false',
+        'default_value' => 1,
+        'ui' => 1,
+        'ui_on_text' => __('On Air', 'flynt'),
+        'ui_off_text' => __('Off Air', 'flynt'),
+    ]
+]);
+
 Options::addTranslatable('NavigationMain', [
     [
         'label' => __('Social Platform', 'flynt'),

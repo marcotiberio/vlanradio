@@ -1,14 +1,14 @@
 <?php
 
-namespace Flynt\Components\BlockArtistSelect;
+namespace Flynt\Components\BlockPageSelect;
 
 use Flynt\FieldVariables;
 use Flynt\Utils\Options;
 use Timber\Timber;
 
-const POST_TYPE = 'artist';
+const POST_TYPE = 'page';
 
-add_filter('Flynt/addComponentData?name=BlockArtistSelect', function ($data) {
+add_filter('Flynt/addComponentData?name=BlockPageSelect', function ($data) {
 
     $postType = POST_TYPE;
 
@@ -20,8 +20,8 @@ add_filter('Flynt/addComponentData?name=BlockArtistSelect', function ($data) {
 function getACFLayout()
 {
     return [
-        'name' => 'BlockArtistSelect',
-        'label' => 'Block: Artist Select',
+        'name' => 'BlockPageSelect',
+        'label' => 'Block: Page Select',
         'sub_fields' => [
             [
                 'label' => __('Title', 'flynt'),
@@ -48,12 +48,12 @@ function getACFLayout()
                 'label' => __('Artist', 'flynt'),
                 'name' => 'artist',
                 'type' => 'relationship',
-                'post_type' => [
-                    'artist'
-                ],
+                // 'post_type' => [
+                //     'post'
+                // ],
                 'allow_null' => 0,
                 'multiple' => 0,
-                'return_format' => 'post_object',
+                // 'return_format' => 'post_object',
                 'ui' => 1,
                 'required' => 0,
             ]

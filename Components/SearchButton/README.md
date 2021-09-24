@@ -1,0 +1,3 @@
+# Search Button
+
+Uses the standard WordPress search functionality. Shows a a search input on top of the paginated results list.

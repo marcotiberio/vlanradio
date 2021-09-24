@@ -1,10 +1,15 @@
 {% if posts|length > 0 %}
-  <ul class="searchList boxShadow themeReset">
+  <ul class="searchList">
     {% for post in posts  %}
-      <li class="searchList-item boxPadding">
+      <li class="searchList-item">
         <article class="post">
           <h2 class="h3"><a href="{{ post.link }}">{{ post.title }}</a></h2>
-          <p>{{ post.preview.length(40).read_more(false) }}</p>
+          {% if post.thumbnail %}
+            <div class="featuredImage">
+              {{ renderComponent('BlockImage', { image: post.thumbnail, noComponentSpacing: true }) }}
+            </div>
+          {% endif %}
+          {# <p>{{ post.preview.length(40).read_more(false) }}</p> #}
           <footer class="post-footer">
             <a href="{{ post.link }}" class="button button--link" aria-hidden="true" tabindex="-1">{{ labels.readMore }}</a>
           </footer>
@@ -12,8 +17,9 @@
       </li>
     {% endfor %}
   </ul>
+</div>
 {% else %}
-  <div class="noResults boxPadding">
+  <div class="noResults">
     <p>{{ labels.noResults }}</p>
   </div>
 {% endif %}

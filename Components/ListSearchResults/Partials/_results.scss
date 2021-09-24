@@ -1,7 +1,8 @@
 .searchList {
   @include reset-list;
-  border-radius: 4px;
-  margin-top: 20px;
+  column-gap: $container-padding;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 
   &-item {
     border-bottom: 1px solid #ececec;
@@ -9,6 +10,10 @@
 
     &:last-child {
       border: 0;
+    }
+
+    .post {
+      padding: 0;
     }
   }
 }
@@ -22,6 +27,5 @@
 }
 
 .noResults {
-  margin-top: 20px;
   text-align: center;
 }

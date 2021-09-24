@@ -31,7 +31,8 @@
       {{ renderComponent('BlockPostFooter', { post: post }) }}
     </footer>
     <section class="post-related">
-      {{ renderComponent('GridPostsLatest', {'preContentHtml': '<h2>' ~ __('Related Posts') ~ '</h2>','taxonomies': post.categories() }) }}
+      <h1>Episodes</h1>
+      {{ renderComponent('GridPostsLatest', {'preContentHtml': '<h1>' ~ __('Episodes') ~ '</h1>','taxonomies': post.categories() }) }}
     </section>
   </article>
 {% endblock %}

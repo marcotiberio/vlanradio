@@ -17,11 +17,11 @@ add_action('Flynt/afterRegisterComponents', function () {
                 'layouts' => [
                     Components\BlockArtistSelect\getACFLayout(),
                     Components\BlockCollapse\getACFLayout(),
-                    Components\BlockEpisodeSelect\getACFLayout(),
+                    Components\BlockLatestEpisodeSelect\getACFLayout(),
                     Components\BlockImage\getACFLayout(),
                     Components\BlockImageText\getACFLayout(),
                     Components\BlockPageLink\getACFLayout(),
-                    Components\BlockVideoOembed\getACFLayout(),
+                    // Components\BlockSoundcloudOembed\getACFLayout(),
                     Components\BlockWysiwyg\getACFLayout(),
                     Components\GridPostsLatest\getACFLayout(),
                     Components\SliderImages\getACFLayout(),

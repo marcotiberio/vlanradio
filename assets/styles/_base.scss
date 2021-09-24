@@ -569,6 +569,7 @@ select {
 
 .mainContent {
   flex: 1 0 auto;
+  margin: 0 $container-padding;
 }
 
 .flyntComponent {
@@ -598,6 +599,13 @@ select {
       padding: $component-spacing-desktop 0;
     }
   }
+}
+
+.container-outer {
+  .fullWidthContainer {
+    padding: 0;
+  }
+
 }
 
 .centerMaxWidthContainer {
@@ -930,6 +938,20 @@ select {
     .excerpt {
       color: $green;
       font-weight: normal;
+    }
+  }
+
+  &-related {
+    border-top: 1px solid $green;
+
+    h1 {
+      margin-left: -12px;
+      padding-top: 0;
+      text-align: left;
+
+      @media (max-width: $breakpoint-mobile-horizontal) {
+        margin-left: 0;
+      }
     }
   }
 }

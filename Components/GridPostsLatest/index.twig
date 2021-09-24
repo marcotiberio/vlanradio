@@ -1,6 +1,6 @@
 {% if items|length > 0 %}
-  <div class="flyntComponent componentSpacing " is="flynt-grid-posts-latest">
-    <div class="container centerMaxWidthContainer">
+  <div class="flyntComponent componentSpacing" is="flynt-grid-posts-latest">
+    <div class="container">
       {% if preContent %}
         <div class="preContent">
           <h1>{{ preContent|e }}</h1>
@@ -40,9 +40,9 @@
           </li>
         {% endfor %}
       </ul>
-      <div class="allPostsLink">
+      {# <div class="allPostsLink">
         <a href="{{ postTypeArchiveLink }}" class="button button--link"><h1>{{ labels.allPosts }}</h1></a>
-      </div>
+      </div> #}
     </div>
   </div>
 {% endif %}

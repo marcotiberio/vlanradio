@@ -1,0 +1,117 @@
+[is='flynt-search-button'] {
+  $search-form-spacing: 0;
+  bottom: 0;
+  height: fit-content;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: fit-content;
+  z-index: 1001;
+
+  .searchForm-open {
+    background-color: $green;
+    border: 0;
+    border-radius: 0;
+    font-size: 20px;
+    height: 56px;
+    line-height: 1;
+    padding: $container-padding;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 99;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .searchForm-close {
+    background-color: transparent;
+    background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="10.885" height="20.701" viewBox="0 0 10.885 20.701"%3E%3Cpath id="arrow" d="M21,1.175,10.825,11,1,1.175" transform="translate(-0.816 21.347) rotate(-90)" fill="none" stroke="%23000" stroke-width="2"/%3E%3C/svg%3E%0A');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 30%;
+    border: 0;
+    border-radius: 0;
+    display: none;
+    height: 56px;
+    padding: $container-padding;
+    position: relative;
+    right: 0;
+    top: 0;
+    transform: rotate(180deg);
+    transition: transform 0.2s linear;
+
+    &:hover {
+      transform: rotate(0deg);
+    }
+  }
+
+  .searchForm {
+    display: block;
+    position: absolute;
+    right: -100%;
+    transition: 0.3s ease right;
+    width: 100%;
+    z-index: 98;
+
+    &-show {
+      right: 300px;
+    }
+
+    &-field {
+      background-color: transparent;
+      display: flex;
+      flex-direction: row;
+      height: 40px;
+      z-index: 1002;
+
+      @media (max-width: $breakpoint-mobile-horizontal) {
+        flex-direction: row;
+      }
+    }
+
+    &-box {
+      flex-grow: 1;
+
+      @media (min-width: $breakpoint-mobile-horizontal) {
+        margin-right: $search-form-spacing;
+      }
+    }
+
+    &-submit {
+      background-color: transparent;
+      border: 0;
+      border-radius: 0;
+      color: $black;
+      font-size: 20px;
+      height: 56px;
+      line-height: 1;
+      padding: $container-padding;
+    }
+
+    &-submit:hover {
+      background-color: $green;
+    }
+
+    &-input {
+      background-color: transparent;
+      border: 0;
+      color: $black;
+      font-size: 20px;
+      height: 100%;
+      line-height: 1;
+      margin: 0;
+      min-height: 56px;
+      outline: none;
+      padding: $container-padding;
+      width: 200px;
+
+      @media (min-width: $breakpoint-tablet-horizontal) {
+        width: 200px;
+      }
+    }
+  }
+
+}

@@ -10,10 +10,12 @@
 
   .grid {
     @include reset-list;
+    column-gap: $container-padding;
     display: grid;
     grid-auto-rows: auto;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     height: fit-content;
+    row-gap: $container-padding;
   }
 
   .grid-item {

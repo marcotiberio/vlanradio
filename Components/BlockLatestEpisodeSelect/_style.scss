@@ -1,4 +1,4 @@
-[is='flynt-block-episode-select'] {
+[is='flynt-block-latest-episode-select'] {
   margin: 0;
 
   .preContent {
@@ -12,6 +12,33 @@
     display: flex;
     flex-flow: row wrap;
     height: 100%;
+
+    &--columns2 {
+      .grid-item {
+
+        @media (min-width: $breakpoint-tablet-horizontal) {
+          width: 50%;
+        }
+      }
+    }
+
+    &--columns3 {
+      .grid-item {
+
+        @media (min-width: $breakpoint-tablet-horizontal) {
+          width: 33.3%;
+        }
+      }
+    }
+    
+    &--columns4 {
+      .grid-item {
+
+        @media (min-width: $breakpoint-tablet-horizontal) {
+          width: 25%;
+        }
+      }
+    }
   }
 
   .grid-item {

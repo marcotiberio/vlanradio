@@ -1,0 +1,11 @@
+{% extends 'templates/_document.twig' %}
+
+{% block content %}
+  {% if posts %}
+    {% for post in posts %}
+        {{ post.title }}
+    {% endfor %}
+{% else %}
+    <p>No matching posts</p>
+{% endif %}
+{% endblock %}

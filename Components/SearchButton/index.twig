@@ -1,0 +1,15 @@
+<div class="flyntComponent" is="flynt-search-button">
+  <div class="container">
+    <button class="searchForm-open button" type="submit" aria-label="search">Search</button>
+    <form class="searchForm" role="search" action="{{ bloginfo('url') }}">
+      <div class="searchForm-field">
+      <button class="searchForm-close button" type="submit"></button>
+        <div class="searchForm-box">
+          <label class="visuallyHidden" for="searchForm-input">{{ searchPlaceholder }}</label>
+          <input name="s" id="searchForm-input" class="searchForm-input" type="search" required placeholder="SUCHE NACH ..." value="{{ searchQuery }}">
+        </div>
+        <button class="searchForm-submit button" type="submit">Go</button>
+      </div>
+    </form>
+  </div>
+</div>

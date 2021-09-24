@@ -1,5 +1,15 @@
 [is='flynt-list-search-results'] {
   @import 'Partials/header';
-  @import 'Partials/pagination';
+  // @import 'Partials/pagination';
   @import 'Partials/results';
+
+  .container {
+    padding: 0;
+  }
+
+  .container-inner {
+    column-gap: 5%;
+    display: grid;
+    grid-template-columns: 20% 75%;
+  }
 }

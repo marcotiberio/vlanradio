@@ -17,7 +17,7 @@ add_action('Flynt/afterRegisterComponents', function () {
                 'layouts' => [
                     Components\BlockArtistSelect\getACFLayout(),
                     Components\BlockImage\getACFLayout(),
-                    Components\BlockEpisodeSelect\getACFLayout(),
+                    Components\BlockLatestEpisodeSelect\getACFLayout(),
                     Components\BlockWysiwyg\getACFLayout(),
                     Components\GridPostsLatest\getACFLayout(),
                     Components\ListSocialArtist\getACFLayout(),

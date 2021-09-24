@@ -1,7 +1,7 @@
 <nav is="flynt-navigation-main" class="flyntComponent" aria-label="{{ __("Main", "flynt") }}">
   <div class="wrapper">
     <div class="headerTop centerMaxWidthContainer">
-      <a class="menu-link menu-link-live" href="/">Now Live</a>
+      <a class="menu-link menu-link-live menu-link-live{{ onAir|e }}" href="/">Now Live</a>
       {% if menu %}
         <ul class="menu">
           {% for item in menu.items %}
@@ -25,7 +25,7 @@
         {% endif %}
       </div> #}
     </div>
-    <div class="container">
+    <div class="headerBottom container">
       <a class="logo" href="{{ site.link }}">
         <img class="logo-image" src="{{ logo.src }}" alt="{{ logo.alt }}">
       </a>
