@@ -1,0 +1,15 @@
+.backToTop {
+  bottom: 140px;
+  position: absolute;
+  right: $container-padding;
+  transition: all 0.1s linear;
+
+  @media (max-width: $breakpoint-tablet-horizontal) {
+    display: none;
+  }
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.5;
+  }
+}

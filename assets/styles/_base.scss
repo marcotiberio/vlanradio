@@ -17,6 +17,7 @@ html {
   line-height: 1.2;
   -ms-overflow-style: -ms-autohiding-scrollbar;
   overflow-wrap: break-word;
+  scroll-behavior: smooth;
   text-transform: uppercase;
   word-wrap: break-word;
 
@@ -634,6 +635,13 @@ select {
   margin-right: $container-padding;
   max-width: 75%;
   padding: 0 $container-padding;
+
+  @media (max-width: $breakpoint-mobile-horizontal) {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    padding: 0;
+  }
 }
 
 .fullWidthContainer {
@@ -857,11 +865,11 @@ select {
 /* Custom styling for single post layouts */
 
 .post {
-  padding: 0 $container-padding;
+  // padding: 0 $container-padding;
 
-  @media (max-width: $breakpoint-tablet-horizontal) {
-    padding: 0;
-  }
+  // @media (max-width: $breakpoint-tablet-horizontal) {
+  //   padding: 0;
+  // }
 
   &-main {
     .componentSpacing {
@@ -929,6 +937,38 @@ select {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
 
+      @media (max-width: $breakpoint-mobile-horizontal) {
+        grid-auto-rows: auto;
+        grid-template-columns: repeat(2, 1fr);
+
+        &-labels {
+          display: none;
+        }
+      }
+
+      .table-header {
+        @media (max-width: $breakpoint-mobile-horizontal) {
+          padding: $container-padding-mobile 0;
+        }
+        
+        &-label {
+          display: none;
+
+          @media (max-width: $breakpoint-mobile-horizontal) {
+            display: block;
+            opacity: 0.5;
+          }
+        }
+      }
+
+      .table-header:nth-child(3) {
+        
+        @media (max-width: $breakpoint-mobile-horizontal) {
+          grid-column-end: 3;
+          grid-column-start: 2;
+        }
+      }
+
       &-title {
         color: $green;
         width: fit-content;
@@ -940,6 +980,10 @@ select {
         flex-flow: row wrap;
         gap: $container-padding;
         padding-left: 0;
+
+        @media (max-width: $breakpoint-mobile-horizontal) {
+          gap: 0;
+        }
 
         &-item {
           display: inline-block;
