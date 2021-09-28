@@ -1,4 +1,11 @@
 {
+  "Components/ListSocial/Assets/facebook.svg": "Components/ListSocial/Assets/facebook-59680163b5.svg",
+  "Components/ListSocial/Assets/instagram.svg": "Components/ListSocial/Assets/instagram-16d4019372.svg",
+  "Components/ListSocial/Assets/linkedin.svg": "Components/ListSocial/Assets/linkedin-9bcc5778c4.svg",
+  "Components/ListSocial/Assets/mail.svg": "Components/ListSocial/Assets/mail-4b76b6943d.svg",
+  "Components/ListSocial/Assets/twitter.svg": "Components/ListSocial/Assets/twitter-65b7f849b2.svg",
+  "Components/ListSocial/Assets/xing.svg": "Components/ListSocial/Assets/xing-d0faa4294a.svg",
+  "Components/ListSocial/Assets/youtube.svg": "Components/ListSocial/Assets/youtube-5ed41aaa24.svg",
   "Components/ListSocialArtist/Assets/facebook.svg": "Components/ListSocialArtist/Assets/facebook-59680163b5.svg",
   "Components/ListSocialArtist/Assets/instagram.svg": "Components/ListSocialArtist/Assets/instagram-16d4019372.svg",
   "Components/ListSocialArtist/Assets/linkedin.svg": "Components/ListSocialArtist/Assets/linkedin-9bcc5778c4.svg",
@@ -12,6 +19,7 @@
   "Components/NavigationFooterColumns/Assets/linkedin.svg": "Components/NavigationFooterColumns/Assets/linkedin-0b2ad64f3d.svg",
   "Components/NavigationFooterColumns/Assets/logo.svg": "Components/NavigationFooterColumns/Assets/logo-4627cdfa7d.svg",
   "Components/NavigationFooterColumns/Assets/mail.svg": "Components/NavigationFooterColumns/Assets/mail-a79a1fa115.svg",
+  "Components/NavigationFooterColumns/Assets/soundcloud.svg": "Components/NavigationFooterColumns/Assets/soundcloud-0323350bdf.svg",
   "Components/NavigationFooterColumns/Assets/twitter.svg": "Components/NavigationFooterColumns/Assets/twitter-b860fd200d.svg",
   "Components/NavigationFooterColumns/Assets/xing.svg": "Components/NavigationFooterColumns/Assets/xing-b8ecedbab7.svg",
   "Components/NavigationFooterColumns/Assets/youtube.svg": "Components/NavigationFooterColumns/Assets/youtube-3b8f2b7f41.svg",
@@ -30,7 +38,7 @@
   "assets/fonts/UniversLT67BoldCondensed.woff2": "assets/fonts/UniversLT67BoldCondensed-bf9dfcde13.woff2",
   "assets/icons/check-circle.svg": "assets/icons/check-circle-98401bcdb9.svg",
   "assets/icons/spinner.svg": "assets/icons/spinner-2e5c842fc5.svg",
-  "assets/main.css": "assets/main-e3a06ee28b.css",
+  "assets/main.css": "assets/main-57040d98dd.css",
   "assets/main.js": "assets/main-264c93f7ef.js",
   "assets/main.js.LICENSE.txt": "assets/main-957f80e714.js.LICENSE.txt"
 }
