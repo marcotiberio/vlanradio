@@ -5,6 +5,61 @@ use Flynt\Components;
 
 add_action('Flynt/afterRegisterComponents', function () {
     ACFComposer::registerFieldGroup([
+        'name' => 'epsiodeMeta',
+        'title' => 'Info Episode',
+        'style' => '',
+        'fields' => [
+            [
+                'label' => __('Date', 'flynt'),
+                'name' => 'dateEpisode',
+                'type' => 'date_picker',
+                'first_day' => 1,
+                'wrapper' => [
+                    'width' => '50',
+                ]
+            ],
+            [
+                'label' => __('Time', 'flynt'),
+                'name' => 'timeEpisode',
+                'type' => 'time_picker',
+                'wrapper' => [
+                    'width' => '50',
+                ]
+            ],
+            [
+                'label' => __('Artist', 'flynt'),
+                'name' => 'artistEpisode',
+                'type' => 'link',
+                'return_format' => 'url',
+                'required' => 0,
+                'wrapper' => [
+                    'width' => '50',
+                ]
+            ],
+            [
+                'label' => __('Show', 'flynt'),
+                'name' => 'showEpisode',
+                'type' => 'link',
+                'return_format' => 'url',
+                'required' => 0,
+                'wrapper' => [
+                    'width' => '50',
+                ]
+            ]
+        ],
+        'location' => [
+            [
+                [
+                    'param' => 'post_type',
+                    'operator' => '==',
+                    'value' => 'post',
+                ],
+            ],
+        ],
+        'menu_order' => 0,
+        'position' => 'acf_after_title',
+    ]);
+    ACFComposer::registerFieldGroup([
         'name' => 'postComponents',
         'title' => 'Post Components',
         'style' => 'seamless',

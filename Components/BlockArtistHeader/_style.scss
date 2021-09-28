@@ -1,8 +1,78 @@
 [is='flynt-block-artist-header'] {
-  .meta-category {
-    color: $green;
-    font-size: 20px;
-    text-decoration: none;
+  .artist-info-table {
+    column-gap: 175px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    @media (max-width: $breakpoint-mobile-horizontal) {
+      column-gap: 0;
+      grid-auto-rows: auto;
+      grid-template-columns: repeat(2, 1fr);
+
+      &-header:nth-child(3) {
+        grid-column-start: 3;
+        grid-column-start: 2;
+        padding-bottom: $container-padding;
+      }
+
+    }
+
+    &-label-desktop {
+      border-bottom: 1px solid $green;
+      column-gap: 175px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      padding-bottom: $container-padding;
+      padding-top: $container-padding;
+    }
+
+    &-header {
+      padding-top: $container-padding;
+
+      @media (max-width: $breakpoint-mobile-horizontal) {
+        border-bottom: 1px solid $green;
+      }
+
+      &-label-desktop {
+        display: block;
+        opacity: 0.5;
+
+        @media (max-width: $breakpoint-mobile-horizontal) {
+          display: none;
+        }
+      }
+      
+      &-label-mobile {
+        display: none;
+
+        @media (max-width: $breakpoint-mobile-horizontal) {
+          display: block;
+          opacity: 0.5;
+          padding-bottom: $container-padding-mobile;
+        }
+      }
+  
+      &-title {
+        color: $green;
+        width: fit-content;
+      }
+  
+      .tags {
+        // @include reset-list;
+        display: flex;
+        flex-flow: row wrap;
+        gap: $container-padding;
+        padding-left: 0;
+    
+        &-item {
+          display: inline-block;
+    
+          &Link {
+            color: $green;
+          }
+        }
+      }
+    }
   }
 
   .featuredImage {
@@ -10,23 +80,6 @@
   }
 
   .content {
-    .episode-header {
-      display: flex;
-      flex-flow: row wrap;
-      gap: 175px;
-      justify-content: flex-start;
-
-      @media (max-width: $breakpoint-mobile-horizontal) {
-        gap: 0;
-      }
-
-
-      &-title {
-        color: $green;
-        width: fit-content;
-      }
-    }
-
     .artist-bio {
       .preTitle {
         margin-bottom: 0;
@@ -45,24 +98,6 @@
 
       p {
         color: $green;
-      }
-    }
-
-    .tags {
-      // @include reset-list;
-      display: flex;
-      flex-flow: row wrap;
-      gap: $container-padding;
-      margin-bottom: $component-spacing * 2;
-      margin-top: $component-spacing * 2;
-      padding-left: 0;
-  
-      &-item {
-        display: inline-block;
-  
-        &Link {
-          color: $green;
-        }
       }
     }
   }

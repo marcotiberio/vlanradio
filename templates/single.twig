@@ -12,8 +12,16 @@
         <p class="episode-header-labels-tags">Genre</p>
       </div>
       <div class="episode-header">
-        <p class="episode-header-title">{{ post.title }}</p>
-        {{ renderComponent('BlockPageLink', { text: post.pageTitle }) }}
+        {# <p class="episode-header-title">{{ post.title }}</p> #}
+        <div class="episode-info">
+        {% if post.dateEpisode or post.timeEpisode %}
+          <span class="episode-date">{{ post.dateEpisode|e }}</span>
+          <span class="visuallyHidden episode-time">{{ post.timeEpisode|e }}</span>
+        {% endif %}
+        </div>
+        {% if post.artistLink %}
+          <a class="episode-artist" href="{{ post.artistEpisode.url|e }}">{{ post.artistEpisode.title|e }}</a>
+        {% endif %}
         {# <a class="episode-header-category meta-category" href="{{ post.category.link|e('esc_url') }}"><span class="visuallyHidden">{{ __("Category:", "flynt") }}</span> {{ post.category }}</a> #}
         {% if post.terms('tag')  %}
         <ul class="tags">

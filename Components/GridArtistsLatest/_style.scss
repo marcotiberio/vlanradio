@@ -1,4 +1,4 @@
-[is='flynt-grid-posts-latest'] {
+[is='flynt-grid-artists-latest'] {
   .preContent {
     margin-left: -12px;
     text-align: left;
@@ -13,7 +13,7 @@
     column-gap: $container-padding;
     display: grid;
     grid-auto-rows: auto;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     height: fit-content;
     row-gap: $container-padding;
   }

@@ -8,6 +8,10 @@
   width: fit-content;
   z-index: 1001;
 
+  @media (max-width: $breakpoint-mobile-horizontal) {
+    display: none;
+  }
+
   .searchForm-open {
     background-color: $green;
     border: 0;

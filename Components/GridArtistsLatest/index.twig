@@ -1,5 +1,5 @@
 {% if items|length > 0 %}
-  <div class="flyntComponent componentSpacing" is="flynt-grid-posts-latest">
+  <div class="flyntComponent componentSpacing" is="flynt-grid-artists-latest">
     <div class="container">
       {% if preContent %}
         <div class="preContent">
@@ -30,7 +30,6 @@
                 <p class="content-inner-title">{{ item.dateEpisode|date("d.m.Y")|escape('wp_kses_post') }}</p>
                 <p class="visuallyHidden content-inner-title">{{ item.timeEpisode|date("g:i a")|escape('wp_kses_post') }}</p>
                 <a class="content-inner-title" href="{{ item.showEpisode.url|e }}">{{ item.showEpisode.title|e }}</a>
-                <a class="content-inner-title" href="{{ item.artistEpisode.url|e }}">{{ item.artistEpisode.title|e }}</a>
                 <ul class="tags">
                   {% for tag in post.terms('tag')  %}
                     <li class="tags-item"><a class="tags-itemLink" href="{{ tag.link }}">{{ tag }}</a></li>

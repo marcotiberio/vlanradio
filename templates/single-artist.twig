@@ -13,5 +13,9 @@
     <footer class="post-header">
       {{ renderComponent('BlockArtistFooter', { post: post }) }}
     </footer>
+    <section class="post-related">
+      <h1>Episodes</h1>
+      {{ renderComponent('GridArtistsLatest', {'preContentHtml': '<h1>' ~ __('Episodes') ~ '</h1>','taxonomies': post.categories() }) }}
+    </section>
   </article>
 {% endblock %}

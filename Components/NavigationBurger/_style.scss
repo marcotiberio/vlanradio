@@ -7,8 +7,10 @@
 }
 
 [is='flynt-navigation-burger'] {
-  $navigation-height: 65px;
+  $navigation-height: 150px;
 
+  display: flex;
+  flex-flow: column wrap;
   height: $navigation-height;
 
   @media (min-width: $breakpoint-tablet-horizontal) {
@@ -21,7 +23,7 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.16);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    height: $navigation-height;
+    height: $navigation-height / 2;
     left: 0;
     padding-bottom: 15px;
     padding-top: 15px;
@@ -38,6 +40,15 @@
         top: 32px;
       }
     }
+  }
+
+  .logotypeMobile {
+    display: block;
+    letter-spacing: -2px;
+    margin: 0 auto;
+    padding-top: $navigation-height / 2;
+    text-align: center;
+    width: calc(100% - 14px);
   }
 
   @import 'Partials/logo';

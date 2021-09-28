@@ -52,6 +52,11 @@ body {
     color: $color-headline;
     text-decoration: none;
   }
+
+  a:hover,
+  a:focus {
+    text-decoration: underline;
+  }
 }
 
 h1,
@@ -123,7 +128,7 @@ a {
 
   &:hover,
   &:focus {
-    color: darken($color-accent, 10%);
+    text-decoration: underline;
   }
 }
 
@@ -570,6 +575,10 @@ select {
 .mainContent {
   flex: 1 0 auto;
   margin: 0 $container-padding;
+
+  @media (max-width: $breakpoint-mobile-horizontal) {
+    margin: 0 $container-padding-mobile;
+  }
 }
 
 .flyntComponent {
@@ -782,61 +791,65 @@ select {
 /* Custom styling for child page layouts */
 
 .single-artist {
-  .post-header {
-    margin-left: auto;
-    margin-right: 0;
-    max-width: 75%;
+  .post {
     padding: 0;
 
-    @media (max-width: $breakpoint-mobile-horizontal) {
-      margin-left: 0;
+    .post-header {
+      margin-left: auto;
       margin-right: 0;
-      max-width: 100%;
+      max-width: 75%;
       padding: 0;
-    }
-
-    hr {
-      transform: translateX(calc(-25% + 10px));
-      width: calc(100vw - 40px);
-
+  
       @media (max-width: $breakpoint-mobile-horizontal) {
-        transform: translateX(-20px);
-        width: 100%;
-      }
-    }
-
-    .fullWidthContainer {
-      padding: 0;
-    }
-
-    .centerMaxWidthContainer {
-      padding: 0;
-
-      @media (max-width: $breakpoint-mobile-horizontal) {
-        padding: 0;
-      }
-    }
-
-    .flyntComponent {
-      &:last-child {
+        margin-left: 0;
+        margin-right: 0;
         max-width: 100%;
-      }
-    }
-  }
-
-  .post-main {
-    .fullWidthContainer {
-      padding: 0;
-    }
-
-    .centerMaxWidthContainer {
-      padding: 0;
-
-      @media (max-width: $breakpoint-mobile-horizontal) {
         padding: 0;
       }
+  
+      hr {
+        transform: translateX(calc(-25% + 10px));
+        width: calc(100vw - 40px);
+  
+        @media (max-width: $breakpoint-mobile-horizontal) {
+          transform: translateX(-20px);
+          width: 100%;
+        }
+      }
+  
+      .fullWidthContainer {
+        padding: 0;
+      }
+  
+      .centerMaxWidthContainer {
+        padding: 0;
+  
+        @media (max-width: $breakpoint-mobile-horizontal) {
+          padding: 0;
+        }
+      }
+  
+      .flyntComponent {
+        &:last-child {
+          max-width: 100%;
+        }
+      }
     }
-  }
+  
+    .post-main {
+      .fullWidthContainer {
+        padding: 0;
+      }
+  
+      .centerMaxWidthContainer {
+        padding: 0;
+  
+        @media (max-width: $breakpoint-mobile-horizontal) {
+          padding: 0;
+        }
+      }
+    }
+  }  
 }
 
 
@@ -845,6 +858,10 @@ select {
 
 .post {
   padding: 0 $container-padding;
+
+  @media (max-width: $breakpoint-tablet-horizontal) {
+    padding: 0;
+  }
 
   &-main {
     .componentSpacing {
@@ -958,11 +975,9 @@ select {
 
 /* Custom styling for tag page layouts */
 
-.archive.tag {
-  .flyntComponent {
-    .tags {
-      display: none;
-    }
+.archive {
+  .screen-reader-text {
+    display: none;
   }
 }
 

@@ -1,16 +1,37 @@
 <div class="flyntComponent" is="flynt-block-artist-header">
   <div class="container fullWidthContainer">
+    <div class="artist-info-table-label-desktop">
+      <p class="artist-info-table-header-label-desktop">Artist</p>
+      <p class="artist-info-table-header-label-desktop">Genre</p>
+      <p class="artist-info-table-header-label-desktop">Follow</p>
+    </div>
+    <div class="artist-info-table">
+      <div class="artist-info-table-header">
+        <p class="artist-info-table-header-label-mobile">Artist</p>
+        <p class="artist-info-table-header-title">{{ post.title }}</p>
+      </div>
+      <div class="artist-info-table-header">
+        <p class="artist-info-table-header-label-mobile">Genre</p>
+        {% if post.terms('tag')  %}
+        <ul class="tags">
+          {% for tag in post.terms('tag')  %}
+            <li class="tags-item"><a class="tags-itemLink" href="{{ tag.link }}"><span class="visuallyHidden">{{ __("Tag:", "flynt") }}</span> {{ tag }}</a></li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+      </div>
+      <div class="artist-info-table-header">
+        <p class="artist-info-table-header-label-mobile">Follow</p>
+        <p class="artist-info-table-header-title"> Social Media</p>
+      </div>
+    </div>
     {% if post.thumbnail %}
       <div class="featuredImage">
         {{ renderComponent('BlockImage', { image: post.thumbnail, noComponentSpacing: true }) }}
       </div>
     {% endif %}
     <div class="content centerMaxWidthContainer">
-      <div class="episode-header">
-        <p class="episode-header-title">{{ post.title }}</p>
-        <p class="episode-header-title"> {{ renderComponent('ListSocialArtist', { listSocialArtist: listSocialArtist }) }}</p>
-      </div>
-      {% if post.post_excerpt %}
+      {% if post.content %}
         <div class="artist-bio">
           <h1 class="preTitle">Bio</h1>
           {# <p class="excerpt">{{ post.post_excerpt }}</p> #}
@@ -18,13 +39,6 @@
             {{ post.content|e('wp_kses_post') }}
           {% endif %}
         </div>
-      {% endif %}
-      {% if post.terms('tag')  %}
-        <ul class="tags">
-          {% for tag in post.terms('tag')  %}
-            <li class="tags-item"><a class="tags-itemLink pill" href="{{ tag.link }}"><span class="visuallyHidden">{{ __("Tag:", "flynt") }}</span> {{ tag }}</a></li>
-          {% endfor %}
-        </ul>
       {% endif %}
       {# <div class="meta">
         {% if post.date %}

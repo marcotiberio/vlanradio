@@ -11,13 +11,14 @@
           <li class="grid-item">
             <div class="content">
               <div class="episode-header">
-                <a class="content-title" href="{{ item.link }}" title="{{ item.title }}" aria-hidden="true" tabindex="-1">{{ item.title }}</a>
+                <a class="content-title" href="{{ item.link }}" title="{{ item.title }}" aria-hidden="true" tabindex="-1">{{ item.title }}
                 {% if item.thumbnail %}
                 <div class="featuredImage">
                   {{ renderComponent('BlockImage', { image: item.thumbnail, noComponentSpacing: true }) }}
                 </div>
                 {% endif %}
                 <p class="content-title">Artist</p>
+                </a>
                 <ul class="tags">
                   {% for tag in item.terms('tag')  %}
                     <li class="tags-item"><a class="tags-itemLink" href="{{ tag.link }}"><span class="visuallyHidden">{{ __("Tag:", "flynt") }}</span> {{ tag }}</a></li>

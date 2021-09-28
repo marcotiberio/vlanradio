@@ -26,7 +26,7 @@
 
   &-item--current {
     .menu-link {
-      color: $color-accent;
+      text-decoration: underline;
     }
   }
 
