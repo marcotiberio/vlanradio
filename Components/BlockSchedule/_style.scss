@@ -36,11 +36,10 @@
       flex-flow: column wrap;
       gap: $container-padding;
       height: 100%;
-      padding: $container-padding 0;
+      padding-bottom: $container-padding;
 
       @media (max-width: $breakpoint-tablet-horizontal) {
-        // display: grid;
-        // grid-template-columns: repeat(2, 1fr);
+        padding-bottom: $container-padding-mobile;
       }
 
       @media (max-width: $breakpoint-mobile-horizontal) {
@@ -54,13 +53,25 @@
 
     @media (max-width: $breakpoint-mobile-horizontal) {
       border-bottom: 1px solid $green;
-      padding-bottom: $container-padding-mobile;
+    }
+
+    &:hover {
+      background-color: $green;
+      cursor: pointer;
+
+      .table-header-label,
+      .episode-header-element,
+      .h1,
+      .tags-itemLink {
+        color: $black;
+      }
     }
 
     .content {
       display: flex;
       flex-direction: column;
       flex-wrap: wrap;
+      padding: $container-padding;
       width: 100%;
 
       @media (max-width: $breakpoint-mobile-horizontal) {
@@ -129,8 +140,8 @@
           display: inline-block;
 
           &Link {
-            color: $green;
             text-decoration: none;
+            transition: none;
           }
         }
       }
@@ -152,7 +163,7 @@
     border-bottom: 0;
   }
 
-  .episode-header-bigger a {
+  .episode-header-bigger {
 
     @media (max-width: $breakpoint-mobile-horizontal) {
       margin-bottom: 0;
@@ -163,7 +174,7 @@
       margin-bottom: 0;
       margin-left: 0;
       padding-top: 0;
-      width: 50vw;
+      width: 77vw;
 
       @media (max-width: $breakpoint-mobile-horizontal) {
         margin-bottom: 0;
