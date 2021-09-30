@@ -12,7 +12,7 @@
       </div>
       <div class="artist-info-table-header">
         <p class="artist-info-table-header-label-mobile">Genre</p>
-        {% if post.terms('tag')  %}
+        {% if post.terms('tag') %}
         <ul class="tags">
           {% for tag in post.terms('tag')  %}
             <li class="tags-item"><a class="tags-itemLink" href="{{ tag.link }}"><span class="visuallyHidden">{{ __("Tag:", "flynt") }}</span> {{ tag }}</a></li>
@@ -22,7 +22,13 @@
       </div>
       <div class="artist-info-table-header">
         <p class="artist-info-table-header-label-mobile">Follow</p>
-        <p class="artist-info-table-header-title"> Social Media</p>
+        {% if post.artistSoundcloud or post.artistInstagram or post.artistFacebook %}
+          <div class="artist-info-table-header-title">
+            <a class="artist-info-table-header-title-soundcloud" href="{{ post.artistSoundcloud|e }}" target="_blank"><span class="visuallyHidden">Soundcloud<span></a>
+            <a class="artist-info-table-header-title-instagram" href="{{ post.artistInstagram|e }}" target="_blank"><span class="artist-info-table-header-title-social-instagram">Instagram<span></a>
+            <a class="artist-info-table-header-title-facebook" href="{{ post.artistFacebook|e }}" target="_blank"><span class="artist-info-table-header-title-social-facebook">Facebook<span></a>
+          </div>
+        {% endif %}
       </div>
     </div>
     {% if post.thumbnail %}

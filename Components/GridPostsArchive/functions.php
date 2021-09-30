@@ -6,8 +6,8 @@ use Flynt\FieldVariables;
 use Flynt\Utils\Options;
 use Timber\Term;
 
-const POST_TYPE = 'post';
-const FILTER_BY_TAXONOMY = 'category';
+const POST_TYPE = 'artist';
+const FILTER_BY_TAXONOMY = 'tag';
 
 add_filter('Flynt/addComponentData?name=GridPostsArchive', function ($data) {
     $postType = POST_TYPE;
