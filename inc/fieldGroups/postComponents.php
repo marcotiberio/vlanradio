@@ -15,12 +15,20 @@ add_action('Flynt/afterRegisterComponents', function () {
                 'type' => 'date_picker',
                 'first_day' => 1,
                 'wrapper' => [
-                    'width' => '50',
+                    'width' => '100',
                 ]
             ],
             [
                 'label' => __('Time', 'flynt'),
                 'name' => 'timeEpisode',
+                'type' => 'time_picker',
+                'wrapper' => [
+                    'width' => '50',
+                ]
+            ],
+            [
+                'label' => __('Time End', 'flynt'),
+                'name' => 'timeEpisodeEnd',
                 'type' => 'time_picker',
                 'wrapper' => [
                     'width' => '50',
