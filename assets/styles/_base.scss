@@ -553,6 +553,10 @@ select {
   }
 }
 
+iframe {
+  width: 100%;
+}
+
 /**
 * 2.0 Helpers
 *
@@ -773,9 +777,9 @@ select {
         padding: 0;
       }
 
-      &:last-child {
-        max-width: 100%;
-      }
+      // &:last-child {
+      //   max-width: 100%;
+      // }
     }
 
     .post-content {

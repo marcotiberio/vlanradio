@@ -76,7 +76,7 @@ add_action('Flynt/afterRegisterComponents', function () {
                     Components\BlockImage\getACFLayout(),
                     Components\BlockImageText\getACFLayout(),
                     Components\BlockPageLink\getACFLayout(),
-                    // Components\BlockSoundcloudOembed\getACFLayout(),
+                    Components\BlockSoundcloudOembed\getACFLayout(),
                     Components\BlockWysiwyg\getACFLayout(),
                     Components\GridPostsLatest\getACFLayout(),
                     Components\SliderImages\getACFLayout(),
