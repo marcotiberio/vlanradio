@@ -17,7 +17,7 @@
                   {{ renderComponent('BlockImage', { image: item.thumbnail, noComponentSpacing: true }) }}
                 </div>
                 {% endif %}
-                <p class="content-title">Artist</p>
+                <a class="content-title" href="{{ item.artistEpisode.url|e }}">{{ item.artistEpisode.title|e }}</a>
                 </a>
                 <ul class="tags">
                   {% for tag in item.terms('tag')  %}
