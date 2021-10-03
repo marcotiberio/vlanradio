@@ -1192,15 +1192,15 @@ select {
   }
 
   .button {
-    background-color: $color-accent;
-    border-color: $color-accent;
-    color: $color-background;
+    background-color: $green;
+    border-color: $green;
+    color: $black;
 
     &:hover,
     &:focus {
       background-color: $color-background-dark;
-      border-color: $color-background-dark;
-      color: $color-background;
+      border-color: $green;
+      color: $green;
     }
 
     &--ghost {
