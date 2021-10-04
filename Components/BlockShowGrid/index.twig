@@ -1,0 +1,16 @@
+{% if items|length > 0 %}
+  <div class="flyntComponent componentSpacing" is="flynt-block-show-grid">      
+    <ul class="grid">
+      {% for item in items %}
+        <li class="grid-item" onclick="javascript:location.href='{{ item.link }}'">
+          <p class="show-title">{{ item.title }}</p>
+          {% if item.thumbnail %}
+          <div class="featuredImage">
+            {{ renderComponent('BlockImage', { image: item.thumbnail, noComponentSpacing: true }) }}
+          </div>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endif %}
