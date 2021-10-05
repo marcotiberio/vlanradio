@@ -77,6 +77,7 @@
       @media (max-width: $breakpoint-mobile-horizontal) {
         display: flex;
         flex-flow: row-reverse wrap;
+        padding: 0 0 $container-padding 0;
       }
 
       .episode-header {
@@ -174,7 +175,6 @@
       margin-bottom: 0;
       margin-left: 0;
       padding-top: 0;
-      width: 77vw;
 
       @media (max-width: $breakpoint-mobile-horizontal) {
         margin-bottom: 0;

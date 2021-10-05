@@ -60,4 +60,4 @@ $context['comingEpisodes'] = Timber::get_posts([
     )
 ]);
 
-Timber::render('templates/page-liveeez.twig', $context);
+Timber::render('templates/page-live.twig', $context);

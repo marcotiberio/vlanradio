@@ -28,7 +28,8 @@
               </a>
               <div class="content-inner noPadding">
                 <p class="content-inner-title">{{ item.dateEpisode|date("d.m.Y")|escape('wp_kses_post') }}</p>
-                <p class="visuallyHidden content-inner-title">{{ item.timeEpisode|date("g:i a")|escape('wp_kses_post') }}</p>
+                <p class="visuallyHidden content-inner-title">{{ item.timeEpisodeStart|date("g:i a")|escape('wp_kses_post') }}</p>
+                <p class="visuallyHidden content-inner-title">{{ item.timeEpisodeStart|date("g:i a")|escape('wp_kses_post') }}</p>
                 <a class="content-inner-title" href="{{ item.showEpisode.url|e }}">{{ item.showEpisode.title|e }}</a>
                 <ul class="tags">
                   {% for tag in post.terms('tag')  %}

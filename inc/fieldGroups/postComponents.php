@@ -19,8 +19,8 @@ add_action('Flynt/afterRegisterComponents', function () {
                 ]
             ],
             [
-                'label' => __('Time', 'flynt'),
-                'name' => 'timeEpisode',
+                'label' => __('Time Start', 'flynt'),
+                'name' => 'timeEpisodeStart',
                 'type' => 'time_picker',
                 'wrapper' => [
                     'width' => '50',

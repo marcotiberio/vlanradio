@@ -1,7 +1,12 @@
 [is='flynt-block-show-grid'] {
+  border-top: 1px solid $green;
   margin: 0;
   padding: $container-padding 0;
   width: 100%;
+
+  @media (max-width: $breakpoint-mobile-horizontal) {
+    border-top: 0;
+  }
 
   .grid {
     @include reset-list;

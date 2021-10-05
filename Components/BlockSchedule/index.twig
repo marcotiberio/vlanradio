@@ -46,7 +46,8 @@
               </div>
               <div class="episode-header-bigger">
                 <div class="spacingColumn"></div>
-                <p class="h1">{{ item.timeEpisode|date("g:i a")|escape('wp_kses_post') }}</p>
+                <p class="h1">{{ item.timeEpisodeStart|date("g:i a") }}</p>
+                <p class="visuallyHidden h1">{{ item.timeEpisodeEnd|date("g:i a") }}</p>
                 <div class="spacingColumn"></div>
                 <div class="spacingColumn"></div>
               </div>
