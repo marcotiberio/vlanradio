@@ -1,5 +1,6 @@
 import './scripts/publicPath'
 import 'console-polyfill'
+import 'smoothscroll-polyfill'
 import 'normalize.css/normalize.css'
 import './main.scss'
 import $ from 'jquery'

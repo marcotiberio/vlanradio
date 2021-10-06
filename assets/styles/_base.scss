@@ -640,7 +640,7 @@ iframe {
   max-width: 75%;
   padding: 0 $container-padding;
 
-  @media (max-width: $breakpoint-mobile-horizontal) {
+  @media (max-width: $breakpoint-tablet-horizontal) {
     margin-left: auto;
     margin-right: auto;
     max-width: 100%;
@@ -811,13 +811,20 @@ iframe {
       margin-right: 0;
       max-width: 75%;
       padding: 0;
-  
-      @media (max-width: $breakpoint-mobile-horizontal) {
+
+      @media (max-width: $breakpoint-tablet-horizontal) {
         margin-left: 0;
         margin-right: 0;
         max-width: 100%;
         padding: 0;
       }
+  
+      // @media (max-width: $breakpoint-mobile-horizontal) {
+      //   margin-left: 0;
+      //   margin-right: 0;
+      //   max-width: 100%;
+      //   padding: 0;
+      // }
   
       hr {
         transform: translateX(calc(-25% + 10px));
@@ -877,14 +884,14 @@ iframe {
 
   &-main {
     .componentSpacing {
-      margin: $component-spacing-mobile/2 0;
+      margin: $container-padding/2 0;
 
       @media (min-width: $breakpoint-tablet) {
-        margin: $component-spacing-tablet/2 0;
+        margin: $container-padding 0;
       }
 
       @media (min-width: $breakpoint-desktop) {
-        margin: $component-spacing-desktop/2 0;
+        margin: $container-padding 0;
       }
 
       &[class*='theme'] {
@@ -1014,8 +1021,9 @@ iframe {
       padding-top: 0;
       text-align: left;
 
-      @media (max-width: $breakpoint-mobile-horizontal) {
+      @media (max-width: $breakpoint-tablet-horizontal) {
         margin-left: 0;
+        margin-top: $container-padding / 2;
       }
     }
   }

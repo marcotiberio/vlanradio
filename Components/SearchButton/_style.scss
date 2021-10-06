@@ -8,7 +8,7 @@
   width: fit-content;
   z-index: 1001;
 
-  @media (max-width: $breakpoint-mobile-horizontal) {
+  @media (max-width: $breakpoint-tablet-horizontal) {
     display: none;
   }
 
