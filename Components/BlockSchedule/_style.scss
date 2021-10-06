@@ -74,6 +74,10 @@
       padding: $container-padding;
       width: 100%;
 
+      @media (max-width: $breakpoint-tablet-horizontal) {
+        padding: 0 0 $container-padding 0;
+      }
+
       @media (max-width: $breakpoint-mobile-horizontal) {
         display: flex;
         flex-flow: row-reverse wrap;
@@ -83,7 +87,8 @@
       .episode-header {
         display: flex;
         flex-flow: row wrap;
-        justify-content: flex-start;
+        justify-content: space-between;
+        width: 100%;
 
         @media (max-width: $breakpoint-mobile-horizontal) {
           display: flex;
@@ -106,6 +111,13 @@
           justify-content: flex-start;
           margin-left: 23vw;
 
+          @media (max-width: $breakpoint-tablet-horizontal) {
+            justify-content: flex-end;
+            margin-left: 0;
+            margin-top: $container-padding;
+            width: 100%;
+          }
+
           @media (max-width: $breakpoint-mobile-horizontal) {
             border-bottom: 0;
             flex-flow: column wrap;
@@ -117,6 +129,10 @@
         .table-header {
           display: flex;
           flex-flow: column wrap;
+
+          @media (max-width: $breakpoint-tablet-horizontal) {
+            max-width: 25%;
+          }
 
           &-label {
             opacity: 0.5;

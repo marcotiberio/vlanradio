@@ -18,6 +18,10 @@
     margin-right: $container-padding;
     max-width: 75%;
     text-align: left;
+
+    @media (max-width: $breakpoint-tablet-horizontal) {
+      max-width: 100%;
+    }
   }
 
   ul {

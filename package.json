@@ -163,7 +163,9 @@
       }
     ]
   },
-  "dependencies": {},
+  "dependencies": {
+    "smoothscroll-polyfill": "^0.4.4"
+  },
   "browserslist": [
     "> 1%",
     "last 2 versions",

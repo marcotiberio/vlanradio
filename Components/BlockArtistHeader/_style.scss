@@ -4,6 +4,10 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 
+    @media (max-width: $breakpoint-tablet-horizontal) {
+      column-gap: $container-padding;
+    }
+
     @media (max-width: $breakpoint-mobile-horizontal) {
       column-gap: 0;
       grid-auto-rows: auto;
@@ -24,6 +28,10 @@
       grid-template-columns: repeat(3, 1fr);
       padding-bottom: $container-padding;
       padding-top: $container-padding;
+
+      @media (max-width: $breakpoint-tablet-horizontal) {
+        column-gap: $container-padding;
+      }
     }
 
     &-header {
@@ -101,7 +109,8 @@
         margin-left: -12px;
         padding-top: 0;
 
-        @media (max-width: $breakpoint-mobile-horizontal) {
+        @media (max-width: $breakpoint-tablet-horizontal) {
+          margin-bottom: $container-padding / 2;
           margin-left: 0;
         }
       }
