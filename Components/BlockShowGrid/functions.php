@@ -23,23 +23,23 @@ function getACFLayout()
         'name' => 'BlockShowGrid',
         'label' => 'Block: Show Grid',
         'sub_fields' => [
-            [
-                'label' => __('Date', 'flynt'),
-                'name' => 'titleTab',
-                'type' => 'tab',
-                'placement' => 'top',
-                'endpoint' => 0
-            ],
-            [
-                'label' => __('Month', 'flynt'),
-                'name' => 'title',
-                'type' => 'date_picker',
-                'required' => 0,
-                'display_format' => 'm.Y',
-                'return_format' => 'm.Y',
-                'first_day' => 1,
-                'step' => 1,
-            ],
+            // [
+            //     'label' => __('Date', 'flynt'),
+            //     'name' => 'titleTab',
+            //     'type' => 'tab',
+            //     'placement' => 'top',
+            //     'endpoint' => 0
+            // ],
+            // [
+            //     'label' => __('Month', 'flynt'),
+            //     'name' => 'title',
+            //     'type' => 'date_picker',
+            //     'required' => 0,
+            //     'display_format' => 'm.Y',
+            //     'return_format' => 'm.Y',
+            //     'first_day' => 1,
+            //     'step' => 1,
+            // ],
             [
                 'label' => __('Episodes', 'flynt'),
                 'name' => 'contentSelectionTab',

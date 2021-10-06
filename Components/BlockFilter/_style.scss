@@ -1,0 +1,36 @@
+[is='flynt-block-filter'] {
+  background-color: $black;
+  border-bottom: 1px solid $green;
+  padding-bottom: $container-padding;
+  padding-top: $container-padding;
+  position: sticky;
+  top: 56px;
+  z-index: 1000;
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  .grid {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: 100%;
+
+    @media (max-width: $breakpoint-tablet-horizontal) {
+      display: flex;
+      flex-flow: row nowrap;
+      overflow: scroll;
+      padding: 0;
+    }
+
+    .filter {
+      border-right: 1px solid $green;
+      padding: 0 $container-padding;
+    }
+
+    .filter:nth-last-child(1) {
+      border-right: 0;
+    }
+  }
+}

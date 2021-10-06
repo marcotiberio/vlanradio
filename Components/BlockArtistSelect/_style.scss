@@ -1,5 +1,6 @@
 [is='flynt-block-artist-select'] {
   margin: 0;
+  scroll-margin-top: 116px;
 
   .container-outer {
     border-bottom: 1px solid $green;
@@ -15,6 +16,7 @@
 
     .preContent {
       display: flex;
+      height: fit-content;
       justify-content: flex-start;
       padding: $container-padding 0;
       width: 100%;
