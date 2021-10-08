@@ -34,16 +34,32 @@ add_action('Flynt/afterRegisterComponents', function () {
                     'width' => '50',
                 ]
             ],
-            [
-                'label' => __('Artist', 'flynt'),
-                'name' => 'artistEpisode',
-                'type' => 'link',
-                'return_format' => 'url',
-                'required' => 0,
-                'wrapper' => [
-                    'width' => '50',
-                ]
-            ],
+            // [
+            //     'label' => __('Featured Artists', 'flynt'),
+            //     'name' => 'featartists',
+            //     'type' => 'repeater',
+            //     'collapsed' => '',
+            //     'layout' => 'block',
+            //     'button_label' => 'Add Artist',
+            //     'wrapper' => [
+            //         'width' => '50',
+            //     ],
+            //     'sub_fields' => [
+            //         [
+            //             'label' => __('Artist', 'flynt'),
+            //             'name' => 'artistEpisode',
+            //             'type' => 'link',
+            //             'return_format' => 'url',
+            //             'required' => 0
+            //         ],
+            //         [
+            //             'label' => __('Test', 'flynt'),
+            //             'name' => 'artistTest',
+            //             'type' => 'text',
+            //             'required' => 0
+            //         ],
+            //     ]
+            // ],
             [
                 'label' => __('Show', 'flynt'),
                 'name' => 'showEpisode',
@@ -51,9 +67,39 @@ add_action('Flynt/afterRegisterComponents', function () {
                 'return_format' => 'url',
                 'required' => 0,
                 'wrapper' => [
-                    'width' => '50',
+                    'width' => '100',
                 ]
-            ]
+                ],
+            [
+                'label' => __('Artist 1', 'flynt'),
+                'name' => 'artist1Episode',
+                'type' => 'link',
+                'return_format' => 'url',
+                'required' => 0,
+                'wrapper' => [
+                    'width' => '33',
+                ]
+            ],
+            [
+                'label' => __('Artist 2', 'flynt'),
+                'name' => 'artist2Episode',
+                'type' => 'link',
+                'return_format' => 'url',
+                'required' => 0,
+                'wrapper' => [
+                    'width' => '33',
+                ]
+            ],
+            [
+                'label' => __('Artist 3', 'flynt'),
+                'name' => 'artist3Episode',
+                'type' => 'link',
+                'return_format' => 'url',
+                'required' => 0,
+                'wrapper' => [
+                    'width' => '33',
+                ]
+            ],
         ],
         'location' => [
             [
@@ -85,8 +131,9 @@ add_action('Flynt/afterRegisterComponents', function () {
                     Components\BlockImageText\getACFLayout(),
                     Components\BlockPageLink\getACFLayout(),
                     Components\BlockSoundcloudOembed\getACFLayout(),
+                    Components\BlockVideoOembed\getACFLayout(),
                     Components\BlockWysiwyg\getACFLayout(),
-                    Components\GridPostsLatest\getACFLayout(),
+                    Components\GridRelatedEpisodes\getACFLayout(),
                     Components\SliderImages\getACFLayout(),
                 ],
             ],

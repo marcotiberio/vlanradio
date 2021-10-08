@@ -19,12 +19,26 @@
             <span class="visuallyHidden episode-date">{{ post.dateEpisodeEnd|date("d.m.Y")|escape('wp_kses_post') }}</span>
           </div>
         {% endif %}
-        {% if post.artistLink %}
+        {# {% if post.featartists %}
+        {% for featartist in post.featartists %}
+          {% if post.featartist.artistTest %}
+            <li class="grid-item">
+              <div class="table-header">
+              <p class="table-header-label">Artists</p>
+              <a class="episode-artist">{{ post.featartist.artistTest|e }}</a>
+            </div>
+            </li>
+          {% endif %}
+        {% endfor %}
+        {% endif %} #}
           <div class="table-header">
             <p class="table-header-label">Artists</p>
-            <a class="episode-artist" href="{{ post.artistEpisode.url|e }}">{{ post.artistEpisode.title|e }}</a>
+            <span><a class="episode-artist" href="{{ post.artist1Episode.url|e }}">{{ post.artist1Episode.title|e }}</a></span>
+            {% if post.artist2Episode or post.artist3Episode %}
+            <span><a class="episode-artist" href="{{ post.artist2Episode.url|e }}">&#38; {{ post.artist2Episode.title|e }}</a></span>
+            <span><a class="episode-artist" href="{{ post.artist3Episode.url|e }}">&#38; {{ post.artist3Episode.title|e }}</a></span>
+            {% endif %}
           </div>
-        {% endif %}
         {% if post.terms('tag')  %}
           <div class="table-header">
             <p class="table-header-label">Genre</p>
@@ -43,9 +57,9 @@
     <footer class="post-meta">
       {{ renderComponent('BlockPostFooter', { post: post }) }}
     </footer>
-    <section class="post-related">
+    {# <section class="post-related">
       <h1>Episodes</h1>
-      {{ renderComponent('GridPostsLatest', {'preContentHtml': '<h1>' ~ __('Episodes') ~ '</h1>','taxonomies': post.categories() }) }}
-    </section>
+      {{ renderComponent('GridPostsLatest', {'preContentHtml': '<h1>' ~ __('Episodes') ~ '</h1>','taxonomies': post.taxonomy('tags') }) }}
+    </section> #}
   </article>
 {% endblock %}

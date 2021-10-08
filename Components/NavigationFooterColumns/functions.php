@@ -101,6 +101,7 @@ Options::addTranslatable('NavigationFooterColumns', [
                 'return_format' => 'array',
                 'choices' => [
                     'soundcloud' => 'Soundcloud',
+                    'mixcloud' => 'Mixcloud',
                     'facebook' => 'Facebook',
                     'instagram' => 'Instagram',
                     'twitter' => 'Twitter',
