@@ -42,7 +42,6 @@ body {
 
 #{$heading-selectors} {
   color: $color-headline;
-  font-weight: 700;
   line-height: 1.45;
   margin-bottom: 0.9rem;
   margin-top: 0;
@@ -296,7 +295,6 @@ button {
   display: inline-block;
   font-family: inherit;
   font-size: 0.875rem;
-  font-weight: 700;
   line-height: inherit;
   padding: 1rem 1.5rem;
   text-align: center;
@@ -449,7 +447,6 @@ fieldset {
 legend {
   display: inline-block;
   font-size: 1.25rem;
-  font-weight: 700;
   margin-bottom: 0.9375rem;
 }
 
@@ -777,9 +774,10 @@ iframe {
         padding: 0;
       }
 
-      // &:last-child {
-      //   max-width: 100%;
-      // }
+      &:last-child {
+        border-top: 1px solid $green;
+        max-width: 100%;
+      }
     }
 
     .post-content {
@@ -934,6 +932,7 @@ iframe {
 
     .episode-header-labels {
       border-bottom: 1px solid $green;
+      column-gap: $container-padding;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       margin-bottom: $container-padding;
@@ -945,6 +944,7 @@ iframe {
     }
 
     .episode-header {
+      column-gap: $container-padding;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
 

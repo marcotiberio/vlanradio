@@ -28,7 +28,7 @@ add_action('Flynt/afterRegisterComponents', function () {
                     Components\BlockVideoOembed\getACFLayout(),
                     Components\BlockWysiwyg\getACFLayout(),
                     Components\FormContactForm7\getACFLayout(),
-                    Components\GridPostsLatest\getACFLayout(),
+                    Components\GridRelatedEpisodes\getACFLayout(),
                     Components\BlockPageLink\getACFLayout(),
                 ]
             ]

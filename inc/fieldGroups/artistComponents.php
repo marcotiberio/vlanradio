@@ -10,6 +10,13 @@ add_action('Flynt/afterRegisterComponents', function () {
         'style' => '',
         'fields' => [
             [
+                'label' => __('Social Media', 'flynt'),
+                'name' => 'socialMedia',
+                'type' => 'tab',
+                'placement' => 'top',
+                'endpoint' => 0,
+            ],
+            [
                 'label' => __('Soundcloud', 'flynt'),
                 'name' => 'artistSoundcloud',
                 'type' => 'url',
@@ -28,6 +35,30 @@ add_action('Flynt/afterRegisterComponents', function () {
             [
                 'label' => __('Facebook', 'flynt'),
                 'name' => 'artistFacebook',
+                'type' => 'url',
+                'wrapper' => [
+                    'width' => '33',
+                ]
+            ],
+            [
+                'label' => __('Mixcloud', 'flynt'),
+                'name' => 'artistMixcloud',
+                'type' => 'url',
+                'wrapper' => [
+                    'width' => '33',
+                ]
+            ],
+            [
+                'label' => __('Bandcamp', 'flynt'),
+                'name' => 'artistBandcamp',
+                'type' => 'url',
+                'wrapper' => [
+                    'width' => '33',
+                ]
+            ],
+            [
+                'label' => __('Website', 'flynt'),
+                'name' => 'artistWebsite',
                 'type' => 'url',
                 'wrapper' => [
                     'width' => '33',
@@ -61,7 +92,7 @@ add_action('Flynt/afterRegisterComponents', function () {
                     Components\BlockImage\getACFLayout(),
                     Components\BlockLatestEpisodeSelect\getACFLayout(),
                     Components\BlockWysiwyg\getACFLayout(),
-                    Components\GridPostsLatest\getACFLayout(),
+                    Components\GridRelatedEpisodes\getACFLayout(),
                     Components\ListSocialArtist\getACFLayout(),
                 ],
             ],
