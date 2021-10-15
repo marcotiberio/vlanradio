@@ -111,4 +111,22 @@
       }
     }
   }
+
+  .figure-image {
+    height: 41vh;
+    object-fit: cover;
+    width: 100%;
+
+    @media (max-width: $breakpoint-tablet-horizontal) {
+      height: 35.5vh;
+      object-fit: cover;
+      width: 100%;
+    }
+
+    @media (max-width: $breakpoint-mobile-horizontal) {
+      height: 42.5vh;
+      object-fit: cover;
+      width: 100%;
+    }
+  }
 }
