@@ -2,7 +2,7 @@
   bottom: 140px;
   position: absolute;
   right: $container-padding;
-  transition: all 0.1s linear;
+  transition: all 0.25s linear;
 
   @media (max-width: $breakpoint-tablet-horizontal) {
     display: none;
@@ -10,6 +10,6 @@
 
   &:hover {
     cursor: pointer;
-    opacity: 0.5;
+    transform: rotate(360deg);
   }
 }
