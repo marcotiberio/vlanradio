@@ -39,7 +39,7 @@
     @media (min-width: $breakpoint-tablet-horizontal) {
       column-gap: $container-padding;
       display: grid;
-      grid-template-columns: calc(25% - 30px) 50% calc(25% - 30px);
+      grid-template-columns: repeat(4, 1fr);
       grid-template-rows: 1fr;
       row-gap: 0;
       width: 100%;
@@ -47,6 +47,12 @@
       .col-1,
       .col-2,
       .col-3 {
+        width: 100%;
+      }
+
+      .col-2 {
+        grid-column-end: 4;
+        grid-column-start: 2;
         width: 100%;
       }
     }
