@@ -38,10 +38,6 @@
     &-header {
       padding-top: $container-padding;
 
-      @media (max-width: $breakpoint-mobile-horizontal) {
-        border-bottom: 1px solid $green;
-      }
-
       &-label-desktop {
         display: block;
         opacity: 0.5;
