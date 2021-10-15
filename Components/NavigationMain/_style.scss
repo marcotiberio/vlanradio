@@ -34,6 +34,7 @@
         animation: none;
         content: '⬤';
         font-size: 10px;
+        margin-left: 20px;
         margin-right: 20px;
       }
 
@@ -90,8 +91,8 @@
     height: 100%;
     justify-content: space-between;
     margin: $navigation-height $container-padding 0 $container-padding;
-    padding-bottom: $container-padding;
-    padding-top: $container-padding;
+    padding-bottom: $container-padding * 3;
+    padding-top: $container-padding * 3;
   }
 
   .logo {
