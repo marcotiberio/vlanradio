@@ -1,7 +1,11 @@
 [is='flynt-block-soundcloud-oembed'] {
-  margin-top: $container-padding 0;
+  margin-top: $container-padding;
   
   .container {
     width: 100%;
+  }
+
+  .visualAudible__body {
+    display: none !important;
   }
 }

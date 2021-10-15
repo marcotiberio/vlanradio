@@ -10,18 +10,18 @@ function getACFLayout()
         'name' => 'BlockSoundcloudOembed',
         'label' => 'Block: Soundcloud Oembed',
         'sub_fields' => [
+            // [
+            //     'label' => __('Soundcloud', 'flynt'),
+            //     'name' => 'soundcloudOembed',
+            //     'type' => 'oembed',
+            //     'required' => 0
+            // ],
             [
-                'label' => __('General', 'flynt'),
-                'name' => 'generalTab',
-                'type' => 'tab',
-                'placement' => 'top',
-                'endpoint' => 0
-            ],
-            [
-                'label' => __('Soundcloud', 'flynt'),
-                'name' => 'soundcloudOembed',
-                'type' => 'oembed',
-                'required' => 1
+                'label' => '',
+                'name' => 'soundcloudOembedText',
+                'type' => 'textarea',
+                'instructions' => __('Copy here the embed code from Soundcloud.', 'flynt'),
+                'required' => 0
             ]
         ]
     ];

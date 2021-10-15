@@ -5,7 +5,7 @@
   .container-outer {
     border-bottom: 1px solid $green;
     display: grid;
-    grid-template-columns: 25% 75%;
+    grid-template-columns: 25vw 75%;
     margin-bottom: $container-padding;
 
     @media (max-width: $breakpoint-tablet-horizontal) {

@@ -1,6 +1,7 @@
 [is='flynt-grid-related-episodes'] {
+  border-top: 1px solid $green;
+
   .preContent {
-    margin-left: -12px;
     text-align: left;
 
     @media (max-width: $breakpoint-mobile-horizontal) {
@@ -69,32 +70,28 @@
       flex-grow: 1;
       text-decoration: none;
     }
-
-    // &-footer {
-    //   align-items: center;
-    //   align-self: flex-end;
-    //   border-top: 1px solid $color-border;
-    //   display: flex;
-    //   justify-content: space-between;
-    //   padding: 0 20px;
-    //   width: 100%;
-
-    //   .content-readMore {
-    //     padding: 0.9rem 0 1.1rem;
-
-    //     &::before {
-    //       bottom: 1.1rem;
-    //     }
-    //   }
-
-    //   @media (min-width: $breakpoint-tablet-horizontal) {
-    //     padding: 0 30px;
-    //   }
-    // }
   }
 
   .allPostsLink {
     border-top: 1px solid $green;
     margin-top: $container-padding * 2;
+  }
+
+  .content-image {
+    height: 56.5vh;
+    object-fit: cover;
+    width: 100%;
+
+    @media (max-width: $breakpoint-tablet-horizontal) {
+      height: 34.5vh;
+      object-fit: cover;
+      width: 100%;
+    }
+
+    @media (max-width: $breakpoint-mobile-horizontal) {
+      height: 43vh;
+      object-fit: cover;
+      width: 100%;
+    }
   }
 }
