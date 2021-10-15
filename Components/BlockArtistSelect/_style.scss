@@ -29,10 +29,11 @@
   
     .grid {
       @include reset-list;
-      column-gap: $container-padding;
+      // column-gap: $container-padding;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       height: 100%;
+      padding-top: $container-padding;
 
       @media (max-width: $breakpoint-tablet-horizontal) {
         display: grid;
@@ -46,11 +47,18 @@
     }
   
     .grid-item {
-      padding: 0;
+      // border-bottom: 1px solid $green;
       width: 100%;
   
       @media (min-width: $breakpoint-tablet-horizontal) {
-        padding: $container-padding 0;
+        padding-bottom: $container-padding;
+        padding-right: $container-padding;
+        width: 100%;
+      }
+
+      @media (min-width: $breakpoint-mobile-horizontal) {
+        padding-bottom: $container-padding;
+        padding-right: $container-padding;
         width: 100%;
       }
   
@@ -107,6 +115,23 @@
         }
       }
     }
+  }
 
+  .figure-image {
+    height: 41vh;
+    object-fit: cover;
+    width: 100%;
+
+    @media (max-width: $breakpoint-tablet-horizontal) {
+      height: 35.5vh;
+      object-fit: cover;
+      width: 100%;
+    }
+
+    @media (max-width: $breakpoint-mobile-horizontal) {
+      height: 42.5vh;
+      object-fit: cover;
+      width: 100%;
+    }
   }
 }

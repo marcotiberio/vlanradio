@@ -25,12 +25,20 @@
     }
 
     .filter {
-      border-right: 1px solid $green;
-      padding: 0 $container-padding;
-    }
+      border-left: 1px solid $green;
+      color: rgba($color: $green, $alpha: 0.5);
+      flex-grow: 1;
+      padding: 0;
+      text-align: center;
 
-    .filter:nth-last-child(1) {
-      border-right: 0;
+      &:nth-last-child(1) {
+        border-right: 1px solid $green;
+      }
+
+      &:hover {
+        color: $green;
+        text-decoration: none;
+      }
     }
   }
 }

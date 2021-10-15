@@ -27,27 +27,54 @@
 
     .grid {
       @include reset-list;
-      column-gap: $container-padding;
+      // column-gap: $container-padding;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       height: 100%;
       padding: $container-padding 0;
-      row-gap: $container-padding;
+      // row-gap: $container-padding;
 
       @media (max-width: $breakpoint-tablet-horizontal) {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+        padding: 0;
       }
 
       @media (max-width: $breakpoint-mobile-horizontal) {
         display: flex;
         flex-flow: column wrap;
+        padding: 0;
       }
     }
   }
 
   .grid-item {
+    border-bottom: 1px solid $green;
+    margin-bottom: $container-padding;
+    padding-bottom: $container-padding;
+    padding-right: $container-padding;
     width: 100%;
+
+    @media (max-width: $breakpoint-tablet-horizontal) {
+      padding-top: 0;
+
+      &:nth-child(even) {
+        padding-right: 0;
+      }
+
+      &:nth-last-child(1) {
+        border-bottom: 0;
+      }
+    }
+
+    @media (max-width: $breakpoint-mobile-horizontal) {
+      padding-right: 0;
+      padding-top: 0;
+
+      &:nth-last-child(1) {
+        border-bottom: 0;
+      }
+    }
 
     .content {
       display: flex;
@@ -82,6 +109,24 @@
           }
         }
       }
+    }
+  }
+
+  .figure-image {
+    height: 41vh;
+    object-fit: cover;
+    width: 100%;
+
+    @media (max-width: $breakpoint-tablet-horizontal) {
+      height: 35.5vh;
+      object-fit: cover;
+      width: 100%;
+    }
+
+    @media (max-width: $breakpoint-mobile-horizontal) {
+      height: 42.5vh;
+      object-fit: cover;
+      width: 100%;
     }
   }
 }

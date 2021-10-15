@@ -53,6 +53,10 @@
 
     @media (max-width: $breakpoint-mobile-horizontal) {
       border-bottom: 1px solid $green;
+
+      &:nth-last-child(1) {
+        border-bottom: 0;
+      }
     }
 
     &:hover {
@@ -67,11 +71,15 @@
       }
     }
 
+    &:nth-child(1) .table-header-label {
+      display: block;
+    }
+
     .content {
       display: flex;
       flex-direction: column;
       flex-wrap: wrap;
-      padding: $container-padding;
+      padding: 0;
       width: 100%;
 
       @media (max-width: $breakpoint-tablet-horizontal) {
@@ -99,9 +107,11 @@
         }
 
         &-element {
+          padding-top: $container-padding;
           width: 23vw;
 
           @media (max-width: $breakpoint-mobile-horizontal) {
+            padding-top: 0;
             width: 100%;
           }
         }
@@ -139,10 +149,13 @@
           }
 
           &-label {
-            opacity: 0.5;
+            border-bottom: 1px solid $green;
+            color: rgba($color: $green, $alpha: 0.5);
+            opacity: 1;
             padding-bottom: $container-padding;
 
             @media (max-width: $breakpoint-mobile-horizontal) {
+              border-bottom: 0;
               padding-bottom: 0;
             }
           }
@@ -207,5 +220,13 @@
         padding-top: 0;
       }
     }
+  }
+
+  .grid-item .table-header-label {
+    display: none;
+  }
+
+  .grid-item:nth-child(1) .table-header-label {
+    display: block;
   }
 }
