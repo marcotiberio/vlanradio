@@ -632,10 +632,10 @@ iframe {
 }
 
 .narrowWidthContainer {
-  margin-left: auto;
-  margin-right: $container-padding;
-  max-width: 75%;
-  padding: 0 $container-padding;
+  margin-left: 25vw;
+  margin-right: 0;
+  max-width: 75vw;
+  padding: 0;
 
   @media (max-width: $breakpoint-tablet-horizontal) {
     margin-left: auto;

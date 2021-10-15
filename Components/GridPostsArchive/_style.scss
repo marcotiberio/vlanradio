@@ -14,7 +14,7 @@
 
   .preContent {
     margin-left: $container-padding;
-    margin-left: auto;
+    margin-left: 25vw;
     margin-right: $container-padding;
     max-width: 75%;
     text-align: left;
@@ -29,10 +29,19 @@
   }
 
   .posts {
+    column-gap: $container-padding;
     display: grid;
     grid-auto-rows: auto;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     height: fit-content;
+
+    @media (max-width: $breakpoint-tablet-horizontal) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: $breakpoint-mobile-horizontal) {
+      grid-template-columns: 1fr;
+    }
   }
 
   .posts-empty {

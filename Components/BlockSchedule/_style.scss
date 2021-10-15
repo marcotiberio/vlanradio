@@ -85,9 +85,11 @@
       }
 
       .episode-header {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-between;
+        // display: flex;
+        // flex-flow: row wrap;
+        // justify-content: space-between;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
         width: 100%;
 
         @media (max-width: $breakpoint-mobile-horizontal) {
@@ -121,7 +123,9 @@
           @media (max-width: $breakpoint-mobile-horizontal) {
             border-bottom: 0;
             flex-flow: column wrap;
+            justify-content: flex-start;
             margin-left: 0;
+            margin-top: 0;
             width: 50%;
           }
         }
@@ -131,7 +135,7 @@
           flex-flow: column wrap;
 
           @media (max-width: $breakpoint-tablet-horizontal) {
-            max-width: 25%;
+            max-width: 100%;
           }
 
           &-label {
@@ -152,6 +156,11 @@
         gap: $container-padding;
         justify-content: flex-start;
         padding-left: 0;
+
+        @media (max-width: $breakpoint-mobile-horizontal) {
+          flex-flow: column wrap;
+          gap: 0;
+        }
 
         &-item {
           display: inline-block;
