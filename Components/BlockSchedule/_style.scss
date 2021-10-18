@@ -60,14 +60,16 @@
     }
 
     &:hover {
-      cursor: pointer;
+      @media (min-width: $breakpoint-tablet-horizontal) {
+        cursor: pointer;
 
-      .episode-header-element,
-      .episode-header-bigger,
-      .h1,
-      .tags-itemLink {
-        background-color: $green;
-        color: $black;
+        .episode-header-element,
+        .episode-header-bigger,
+        .h1,
+        .tags-itemLink {
+          background-color: $green;
+          color: $black;
+        }
       }
     }
 
@@ -213,14 +215,16 @@
     }
 
     &:hover {
-      cursor: pointer;
+      @media (min-width: $breakpoint-tablet-horizontal) {
+        cursor: pointer;
 
-      .h1 {
-        &::after {
-          color: $black;
-          content: '➞';
-          margin-left: 200px;
-          opacity: 1;
+        .h1 {
+          &::after {
+            color: $black;
+            content: '➞';
+            margin-left: 200px;
+            opacity: 1;
+          }
         }
       }
     }

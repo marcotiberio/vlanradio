@@ -783,9 +783,9 @@ iframe {
       max-width: 75%;
       padding: 0;
 
-      @media (max-width: $breakpoint-mobile-horizontal) {
-        margin-left: $container-padding;
-        margin-right: $container-padding;
+      @media (max-width: $breakpoint-tablet-horizontal) {
+        margin-left: 0;
+        margin-right: 0;
         max-width: 100%;
         padding: 0;
       }
@@ -934,6 +934,7 @@ iframe {
       grid-template-columns: repeat(3, 1fr);
 
       @media (max-width: $breakpoint-mobile-horizontal) {
+        column-gap: 0;
         grid-auto-rows: auto;
         grid-template-columns: repeat(2, 1fr);
 
@@ -951,8 +952,11 @@ iframe {
           display: none;
 
           @media (max-width: $breakpoint-mobile-horizontal) {
+            border-bottom: 1px solid $green;
             display: block;
+            margin-bottom: $container-padding / 2;
             opacity: 0.5;
+            padding-bottom: $container-padding / 2;
           }
         }
       }
@@ -978,6 +982,7 @@ iframe {
         padding-left: 0;
 
         @media (max-width: $breakpoint-mobile-horizontal) {
+          flex-flow: column wrap;
           gap: 0;
         }
 

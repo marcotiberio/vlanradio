@@ -1,11 +1,30 @@
 [is='flynt-block-info-show'] {
+  .table-header {
+    &--desktop {
+      display: block;
+
+      @media (max-width: $breakpoint-mobile-horizontal) {
+        display: none;
+      }
+    }
+
+    &--mobile {
+      display: none;
+
+      @media (max-width: $breakpoint-mobile-horizontal) {
+        display: block;
+      }
+    }
+  }
+
   .grid-show-labels {
     display: grid;
-    grid-template-columns: calc(25% - 30px) 50% calc(25% - 30px);
+    grid-template-columns: repeat(3, 1fr);
 
     @media (max-width: $breakpoint-mobile-horizontal) {
       column-gap: $container-padding / 2;
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-auto-rows: auto;
+      grid-template-columns: repeat(2, 1fr);
     }
 
     &-header {
@@ -17,11 +36,27 @@
   .grid-show {
     border-top: 1px solid $green;
     display: grid;
-    grid-template-columns: calc(25% - 30px) 50% calc(25% - 30px);
+    grid-template-columns: repeat(3, 1fr);
 
     @media (max-width: $breakpoint-mobile-horizontal) {
       column-gap: $container-padding / 2;
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-auto-rows: auto;
+      grid-template-columns: repeat(2, 1fr);
+
+      .info-mobile {
+        padding-bottom: $container-padding;
+      }
+
+      .info-mobile:nth-last-child(1) {
+        grid-column-end: 3;
+        grid-column-start: 2;
+      }
+
+      &-labels-header {
+        border-bottom: 1px solid $green;
+        margin-bottom: $container-padding / 2;
+        padding-bottom: $container-padding / 2;
+      }
     }
 
     &-header {
