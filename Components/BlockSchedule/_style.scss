@@ -221,7 +221,8 @@
         .h1 {
           &::after {
             color: $black;
-            content: '➞';
+            content: '▶';
+            font-size: 180px;
             margin-left: 200px;
             opacity: 1;
           }
@@ -236,7 +237,8 @@
 
       &::after {
         color: $black;
-        content: '➞';
+        content: '▶';
+        font-size: 180px;
         margin-left: 0;
         opacity: 0;
         transition: all 0.2s linear;

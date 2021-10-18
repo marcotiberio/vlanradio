@@ -10,21 +10,21 @@
       <li class="list-episodes-item" onclick="javascript:location.href='{{ post.link }}'">
         <div class="content">
           <div class="episode-header">
-            <div class="table-header">
+            {# <div class="table-header">
               <p class="table-header-label">Date</p>
               <p class="episode-header-element">{{ post.dateEpisode|date("d.m.Y") }}</p>
               <p class="visuallyHidden episode-header-element">{{ post.timeEpisodeStart|date("H:i:s") }}</p>
               <p class="visuallyHidden episode-header-element">{{ post.timeEpisodeEnd|date("H:i:s") }}</p>
               <p class="visuallyHidden episode-header-element">{{ date().timestamp }}</p>
               <p class="visuallyHidden episode-header-element">{{ 'now'|date('U') }}</p>
-            </div>
+            </div> #}
             <div class="table-header">
               <p class="table-header-label">Show</p>
-              <p class="episode-header-element" href="{{ post.showEpisode.url|e }}">{{ post.showEpisode.title|e }}</p>
+              <a class="episode-header-element" href="{{ post.showEpisode.url|e }}">{{ post.showEpisode.title|e }}</a>
             </div>
             <div class="table-header">
               <p class="table-header-label">Artist</p>
-              <p class="episode-header-element" href="{{ post.artistEpisode.url|e }}">{{ post.artistEpisode.title|e }}</p>
+              <a class="episode-header-element" href="{{ post.artistEpisode.url|e }}">{{ post.artistEpisode.title|e }}</a>
             </div>
             <div class="table-header">
               <p class="table-header-label">Genre</p>
@@ -37,33 +37,34 @@
           </div>
           <div class="episode-header-bigger">
             <div class="spacingColumn"></div>
-            <p class="h1">{{ post.timeEpisodeStart|date("g:i a") }}</p>
+            <p class="h1">{{ post.timeEpisodeStart|date("g:i a")|escape('wp_kses_post') }}</p>
+            <p class="visuallyHidden h1">{{ post.timeEpisodeStart|date("g:i a")|escape('wp_kses_post') }}</p>
             <div class="spacingColumn"></div>
             <div class="spacingColumn"></div>
           </div>
         </div>
       </li>
     {% endfor %}
-    {% for post in comingEpisodes %}
     <div class="preContent"><p>Coming Up</p></div>
+    {% for post in comingEpisodes %}
       <li class="list-episodes-item" onclick="javascript:location.href='{{ post.link }}'">
         <div class="content">
           <div class="episode-header">
-            <div class="table-header">
+            {# <div class="table-header">
               <p class="table-header-label">Date</p>
               <p class="episode-header-element">{{ post.dateEpisode|date("d.m.Y") }}</p>
               <p class="visuallyHidden episode-header-element">{{ post.timeEpisodeStart|date("H:i:s") }}</p>
               <p class="visuallyHidden episode-header-element">{{ post.timeEpisodeEnd|date("H:i:s") }}</p>
               <p class="visuallyHidden episode-header-element">{{ date().timestamp }}</p>
               <p class="visuallyHidden episode-header-element">{{ 'now'|date('U') }}</p>
-            </div>
+            </div> #}
             <div class="table-header">
               <p class="table-header-label">Show</p>
-              <p class="episode-header-element" href="{{ post.showEpisode.url|e }}">{{ post.showEpisode.title|e }}</p>
+              <a class="episode-header-element" href="{{ post.showEpisode.url|e }}">{{ post.showEpisode.title|e }}</a>
             </div>
             <div class="table-header">
               <p class="table-header-label">Artist</p>
-              <p class="episode-header-element" href="{{ post.artistEpisode.url|e }}">{{ post.artistEpisode.title|e }}</p>
+              <a class="episode-header-element" href="{{ post.artistEpisode.url|e }}">{{ post.artistEpisode.title|e }}</a>
             </div>
             <div class="table-header">
               <p class="table-header-label">Genre</p>
