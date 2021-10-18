@@ -25,7 +25,7 @@ $context['nowEpisode'] = Timber::get_posts([
         array(
             'key' => 'dateEpisode',
             'value' => $today,
-            'compare' => '>=',
+            'compare' => '=',
             'type' => 'DATE'
         ),
         array(

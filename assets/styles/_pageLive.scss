@@ -30,9 +30,10 @@
     }
 
     .preContent {
-      border-bottom: 1px solid $green;
+      // border-bottom: 1px solid $green;
       display: flex;
       justify-content: flex-start;
+      margin-bottom: 0;
       padding: $container-padding 0;
       width: 100%;
   
@@ -47,7 +48,7 @@
       @include reset-list;
       display: flex;
       flex-flow: column wrap;
-      gap: $container-padding;
+      // gap: $container-padding;
       order: 2;
       padding-bottom: $container-padding;
       padding-left: 0;
@@ -65,45 +66,40 @@
   }
 
   .list-episodes-item {
+    border-top: 1px solid $green;
+    padding-bottom: $container-padding;
+    padding-top: $container-padding;
     width: 100%;
   
     @media (max-width: $breakpoint-mobile-horizontal) {
       border-bottom: 1px solid $green;
     }
   
-    &:hover {
-      background-color: $green;
-      cursor: pointer;
-  
-      .table-header-label,
-      .episode-header-element,
-      .h1,
-      .tags-itemLink {
-        color: $black;
-      }
-    }
-  
     .content {
       display: flex;
       flex-direction: column;
       flex-wrap: wrap;
-      padding: $container-padding;
-      width: 100%;
+      // padding: $container-padding;
+      margin-left: 25%;
+      width: 75%;
 
       @media (max-width: $breakpoint-tablet-horizontal) {
+        margin-left: 0;
         padding: 0 0 $container-padding 0;
+        width: 100%;
       }
   
       @media (max-width: $breakpoint-mobile-horizontal) {
         display: flex;
         flex-flow: row-reverse wrap;
+        margin-left: 0;
         padding: 0 0 $container-padding 0;
+        width: 100%;
       }
   
       .episode-header {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
         width: 100%;
   
         @media (max-width: $breakpoint-mobile-horizontal) {
@@ -113,7 +109,6 @@
         }
   
         &-element {
-          width: 23vw;
   
           @media (max-width: $breakpoint-mobile-horizontal) {
             width: 100%;
@@ -121,11 +116,10 @@
         }
   
         &-bigger {
-          border-bottom: 1px solid $green;
+          // border-bottom: 1px solid $green;
           display: flex;
           flex-flow: row wrap;
           justify-content: flex-start;
-          margin-left: 23vw;
 
           @media (max-width: $breakpoint-tablet-horizontal) {
             justify-content: flex-end;
@@ -139,6 +133,7 @@
             border-bottom: 0;
             flex-flow: column wrap;
             margin-left: 0;
+            margin-top: 0;
             width: 50%;
           }
         }
@@ -172,6 +167,10 @@
           &Link {
             text-decoration: none;
             transition: none;
+
+            &:hover {
+              text-decoration: underline;
+            }
           }
         }
       }
@@ -188,9 +187,13 @@
       margin-top: 0;
     }
   }
+
+  .list-episodes-item:first-child .table-header-label {
+    display: none;
+  }
   
-  .list-episodes-item:nth-last-child(1) .episode-header-bigger {
-    border-bottom: 0;
+  .list-episodes-item:nth-child(1) .episode-header-bigger {
+    border-top: 0;
   }
   
   .episode-header-bigger {
@@ -203,9 +206,35 @@
     .h1 {
       margin-bottom: 0;
       margin-left: 0;
-      padding-top: 0;
+
+      &::after {
+        color: $black;
+        content: '▶';
+        font-size: 180px;
+        margin-left: 0;
+        opacity: 0;
+        transition: all 0.2s linear;
+
+        @media (max-width: $breakpoint-tablet-horizontal) {
+          display: none;
+        }
+      }
+
+      &:hover {
+        @media (min-width: $breakpoint-tablet-horizontal) {
+          cursor: pointer;
   
-      @media (max-width: $breakpoint-mobile-horizontal) {
+          &::after {
+            color: $green;
+            content: '▶';
+            font-size: 180px;
+            margin-left: 200px;
+            opacity: 1;
+          }
+        }
+      }
+  
+      @media (max-width: $breakpoint-tablet-horizontal) {
         margin-bottom: 0;
         margin-left: 0;
         padding-top: 0;
