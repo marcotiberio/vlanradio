@@ -37,14 +37,16 @@
     &-inner {
       @include reset-content-margins;
       color: $green;
+      display: flex;
+      flex-flow: column wrap;
       flex-grow: 1;
-
+      
       #{$heading-selectors} {
         color: $green;
       }
 
       .content-inner-title {
-        margin-top: $container-padding / 2;
+        margin-bottom: $container-padding / 2;
       }
 
       .tags {

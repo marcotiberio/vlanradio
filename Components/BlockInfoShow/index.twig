@@ -1,12 +1,30 @@
 <div class="flyntComponent fullWidthContainer" is="flynt-block-info-show">
-  <div class="grid-show-labels boxPaddingTopBottom">
-    <p class="grid-show-labels-header">Show</p>
-    <p class="grid-show-labels-header">Frequency</p>
-    <p class="grid-show-labels-header">Next Episode</p>
+  <div class="table-header--desktop">
+    <div class="grid-show-labels boxPaddingTopBottom">
+      <p class="grid-show-labels-header">Show</p>
+      <p class="grid-show-labels-header">Frequency</p>
+      <p class="grid-show-labels-header">Next Episode</p>
+    </div>
+    <div class="grid-show boxPaddingTopBottom">
+      <a class="grid-show-header" href="{{ showLink|e }}">{{ showTitle|e }}</a>
+      <p class="grid-show-header">{{ showFrequency }}</p>
+      <p class="grid-show-header">{{ showNextEpisode }}</p>
+    </div>
   </div>
-  <div class="grid-show boxPaddingTopBottom">
-    <a class="grid-show-header" href="{{ showLink|e }}">{{ showTitle|e }}</a>
-    <p class="grid-show-header">{{ showFrequency }}</p>
-    <p class="grid-show-header">{{ showNextEpisode }}</p>
+  <div class="table-header--mobile">
+    <div class="grid-show boxPaddingTopBottom">
+      <div class="info-mobile">
+        <p class="grid-show-labels-header">Show</p>
+        <a class="grid-show-header" href="{{ showLink|e }}">{{ showTitle|e }}</a>
+      </div>
+      <div class="info-mobile">
+        <p class="grid-show-labels-header">Frequency</p>
+        <p class="grid-show-header">{{ showFrequency }}</p>
+      </div>
+      <div class="info-mobile">
+        <p class="grid-show-labels-header">Next Episode</p>
+        <p class="grid-show-header">{{ showNextEpisode }}</p>
+      </div>
+    </div>
   </div>
 </div>
