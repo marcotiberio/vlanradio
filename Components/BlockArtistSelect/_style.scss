@@ -5,7 +5,7 @@
   .container-outer {
     border-bottom: 1px solid $green;
     display: grid;
-    grid-template-columns: 25vw 75%;
+    grid-template-columns: 25% 75%;
     margin-bottom: $container-padding;
 
     @media (max-width: $breakpoint-tablet-horizontal) {
@@ -51,13 +51,13 @@
       width: 100%;
   
       @media (min-width: $breakpoint-tablet-horizontal) {
-        padding-bottom: $container-padding;
+        padding-bottom: $container-padding * 2;
         padding-right: $container-padding;
         width: 100%;
       }
 
       @media (min-width: $breakpoint-mobile-horizontal) {
-        padding-bottom: $container-padding;
+        padding-bottom: $container-padding * 2;
         padding-right: $container-padding;
         width: 100%;
       }

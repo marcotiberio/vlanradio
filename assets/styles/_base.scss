@@ -903,6 +903,10 @@ iframe {
       }
     }
 
+    .fullWidthContainer {
+      margin-left: 0;
+    }
+
     p,
     .tags,
     a {
@@ -919,7 +923,7 @@ iframe {
       border-bottom: 1px solid $green;
       column-gap: $container-padding;
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       margin-bottom: $container-padding;
       padding: $container-padding 0;
 
@@ -931,7 +935,7 @@ iframe {
     .episode-header {
       column-gap: $container-padding;
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
 
       @media (max-width: $breakpoint-mobile-horizontal) {
         column-gap: 0;
@@ -958,14 +962,6 @@ iframe {
             opacity: 0.5;
             padding-bottom: $container-padding / 2;
           }
-        }
-      }
-
-      .table-header:nth-child(3) {
-        
-        @media (max-width: $breakpoint-mobile-horizontal) {
-          grid-column-end: 3;
-          grid-column-start: 2;
         }
       }
 
