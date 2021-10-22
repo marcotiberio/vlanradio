@@ -903,6 +903,10 @@ iframe {
       }
     }
 
+    .fullWidthContainer {
+      margin-left: 0;
+    }
+
     p,
     .tags,
     a {
@@ -919,7 +923,7 @@ iframe {
       border-bottom: 1px solid $green;
       column-gap: $container-padding;
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       margin-bottom: $container-padding;
       padding: $container-padding 0;
 
@@ -931,7 +935,7 @@ iframe {
     .episode-header {
       column-gap: $container-padding;
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
 
       @media (max-width: $breakpoint-mobile-horizontal) {
         column-gap: 0;
@@ -958,14 +962,6 @@ iframe {
             opacity: 0.5;
             padding-bottom: $container-padding / 2;
           }
-        }
-      }
-
-      .table-header:nth-child(3) {
-        
-        @media (max-width: $breakpoint-mobile-horizontal) {
-          grid-column-end: 3;
-          grid-column-start: 2;
         }
       }
 
@@ -1014,6 +1010,79 @@ iframe {
       @media (max-width: $breakpoint-tablet-horizontal) {
         margin-left: 0;
         margin-top: $container-padding / 2;
+      }
+    }
+  }
+}
+
+/* Custom styling for page Shows */
+
+.page-shows-archive {
+  .flyntComponent--flynt-block-show-grid {
+    display: grid;
+    grid-template-columns: 25% 75%;
+
+    @media (max-width: $breakpoint-mobile-horizontal) {
+      display: flex;
+      flex-flow: column wrap;
+    }
+
+    .preContent {
+      text-align: left;
+      width: 100%;
+    }
+
+    .grid {
+      column-gap: 20px;
+      display: flex;
+      flex-flow: column wrap;
+      height: 100%;
+      list-style: none;
+      margin: 0;
+      padding: 0 0 20px;
+    }
+
+    .grid-item:hover .figure-image {
+      filter: grayscale(0) contrast(1) blur(0);
+      mix-blend-mode: initial;
+    }
+
+    .figure {
+      background-color: $green;
+      display: flex;
+      flex: 1 1 100%;
+      height: 100%;
+      overflow: hidden;
+      padding: 0;
+      position: relative;
+      
+
+      &-image {
+        filter: grayscale(100%) contrast(1) blur(0);
+        flex: 1 0 100%;
+        height: 600px;
+        mix-blend-mode: multiply;
+        object-fit: cover;
+        opacity: 1;
+        position: relative;
+      }
+
+      &::before {
+        background-color: $black;
+        bottom: 0;
+        content: '';
+        height: 100%;
+        left: 0;
+        mix-blend-mode: lighten;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+      }
+
+      @media (max-width: $breakpoint-tablet-horizontal) {
+        height: 300px;
       }
     }
   }

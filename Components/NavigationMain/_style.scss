@@ -28,7 +28,7 @@
     .menu-link-live {
       align-items: center;
       display: flex;
-      width: 25vw;
+      width: calc(25vw + 10px);
 
       &::before {
         animation: none;

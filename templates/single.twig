@@ -8,6 +8,7 @@
     <section class="post-main narrowWidthContainer">
       <div class="episode-header-labels">
         <p class="episode-header-labels-category">Episode</p>
+        <p class="episode-header-labels-category">Show</p>
         <p class="episode-header-labels-artist">Artist</p>
         <p class="episode-header-labels-tags">Genre</p>
       </div>
@@ -19,26 +20,20 @@
             <span class="visuallyHidden episode-date">{{ post.dateEpisodeEnd|date("d.m.Y")|escape('wp_kses_post') }}</span>
           </div>
         {% endif %}
-        {# {% if post.featartists %}
-        {% for featartist in post.featartists %}
-          {% if post.featartist.artistTest %}
-            <li class="grid-item">
-              <div class="table-header">
-              <p class="table-header-label">Artists</p>
-              <a class="episode-artist">{{ post.featartist.artistTest|e }}</a>
-            </div>
-            </li>
-          {% endif %}
-        {% endfor %}
-        {% endif %} #}
+        {% if post.showEpisode %}
           <div class="table-header">
-            <p class="table-header-label">Artists</p>
-            <span><a class="episode-artist" href="{{ post.artist1Episode.url|e }}">{{ post.artist1Episode.title|e }}</a></span>
-            {% if post.artist2Episode or post.artist3Episode %}
-            <span><a class="episode-artist" href="{{ post.artist2Episode.url|e }}">&#38; {{ post.artist2Episode.title|e }}</a></span>
-            <span><a class="episode-artist" href="{{ post.artist3Episode.url|e }}">&#38; {{ post.artist3Episode.title|e }}</a></span>
-            {% endif %}
+            <p class="table-header-label">Show</p>
+            <span><a class="episode-artist" href="{{ post.showEpisode.url|e }}">{{ post.showEpisode.title|e }}</a></span>
           </div>
+        {% endif %}
+        <div class="table-header">
+          <p class="table-header-label">Artists</p>
+          <span><a class="episode-artist" href="{{ post.artist1Episode.url|e }}">{{ post.artist1Episode.title|e }}</a></span>
+          {% if post.artist2Episode or post.artist3Episode %}
+          <span><a class="episode-artist" href="{{ post.artist2Episode.url|e }}">&#38; {{ post.artist2Episode.title|e }}</a></span>
+          <span><a class="episode-artist" href="{{ post.artist3Episode.url|e }}">&#38; {{ post.artist3Episode.title|e }}</a></span>
+          {% endif %}
+        </div>
         {% if post.terms('tag')  %}
           <div class="table-header">
             <p class="table-header-label">Genre</p>

@@ -34,42 +34,6 @@ add_action('Flynt/afterRegisterComponents', function () {
                     'width' => '50',
                 ]
             ],
-            // [
-            //     'label' => __('Featured Artists', 'flynt'),
-            //     'name' => 'featartists',
-            //     'type' => 'repeater',
-            //     'collapsed' => '',
-            //     'layout' => 'block',
-            //     'button_label' => 'Add Artist',
-            //     'wrapper' => [
-            //         'width' => '50',
-            //     ],
-            //     'sub_fields' => [
-            //         [
-            //             'label' => __('Artist', 'flynt'),
-            //             'name' => 'artistEpisode',
-            //             'type' => 'link',
-            //             'return_format' => 'url',
-            //             'required' => 0
-            //         ],
-            //         [
-            //             'label' => __('Test', 'flynt'),
-            //             'name' => 'artistTest',
-            //             'type' => 'text',
-            //             'required' => 0
-            //         ],
-            //     ]
-            // ],
-            [
-                'label' => __('Show', 'flynt'),
-                'name' => 'showEpisode',
-                'type' => 'link',
-                'return_format' => 'url',
-                'required' => 0,
-                'wrapper' => [
-                    'width' => '100',
-                ]
-                ],
             [
                 'label' => __('Artist 1', 'flynt'),
                 'name' => 'artist1Episode',
@@ -98,6 +62,15 @@ add_action('Flynt/afterRegisterComponents', function () {
                 'required' => 0,
                 'wrapper' => [
                     'width' => '33',
+                ]
+            ],
+            [
+                'label' => __('Show', 'flynt'),
+                'name' => 'showEpisode',
+                'type' => 'link',
+                'return_format' => 'url',
+                'wrapper' => [
+                    'width' => '100',
                 ]
             ],
         ],
