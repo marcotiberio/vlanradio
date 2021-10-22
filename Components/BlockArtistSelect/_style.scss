@@ -117,21 +117,55 @@
     }
   }
 
-  .figure-image {
-    height: 41vh;
-    object-fit: cover;
-    width: 100%;
+  .grid-item:hover .figure-image {
+    filter: grayscale(0) contrast(1) blur(0);
+    mix-blend-mode: initial;
+  }
 
-    @media (max-width: $breakpoint-tablet-horizontal) {
-      height: 35.5vh;
+  .figure {
+    background-color: $green;
+    display: flex;
+    flex: 1 1 100%;
+    height: 100%;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    
+
+    &-image {
+      filter: grayscale(100%) contrast(1) blur(0);
+      flex: 1 0 100%;
+      height: 41vh;
+      mix-blend-mode: multiply;
       object-fit: cover;
-      width: 100%;
+      opacity: 1;
+      position: relative;
+
+      @media (max-width: $breakpoint-tablet-horizontal) {
+        height: 35.5vh;
+        object-fit: cover;
+        width: 100%;
+      }
+  
+      @media (max-width: $breakpoint-mobile-horizontal) {
+        height: 42.5vh;
+        object-fit: cover;
+        width: 100%;
+      }
     }
 
-    @media (max-width: $breakpoint-mobile-horizontal) {
-      height: 42.5vh;
-      object-fit: cover;
+    &::before {
+      background-color: $black;
+      bottom: 0;
+      content: '';
+      height: 100%;
+      left: 0;
+      mix-blend-mode: lighten;
+      position: absolute;
+      right: 0;
+      top: 0;
       width: 100%;
+      z-index: 1;
     }
   }
 
