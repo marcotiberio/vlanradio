@@ -1017,8 +1017,8 @@ iframe {
 
 /* Custom styling for page Shows */
 
-.page-shows {
-  [is='flynt-block-show-grid'] {
+.page-shows-archive {
+  .flyntComponent--flynt-block-show-grid {
     display: grid;
     grid-template-columns: 25% 75%;
 
