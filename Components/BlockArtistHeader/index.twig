@@ -1,4 +1,9 @@
 <div class="flyntComponent" is="flynt-block-artist-header">
+  {% if post.thumbnail %}
+    <div class="featuredImage">
+      {{ renderComponent('BlockImage', { image: post.thumbnail, noComponentSpacing: true }) }}
+    </div>
+  {% endif %}
   <div class="container fullWidthContainer">
     <div class="artist-info-table-label-desktop">
       <p class="artist-info-table-header-label-desktop">Artist</p>
@@ -34,11 +39,11 @@
         {% endif %}
       </div>
     </div>
-    {% if post.thumbnail %}
+    {# {% if post.thumbnail %}
       <div class="featuredImage">
         {{ renderComponent('BlockImage', { image: post.thumbnail, noComponentSpacing: true }) }}
       </div>
-    {% endif %}
+    {% endif %} #}
     <div class="content centerMaxWidthContainer">
       {% if post.content %}
         <div class="artist-bio">

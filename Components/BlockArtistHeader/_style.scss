@@ -1,4 +1,12 @@
 [is='flynt-block-artist-header'] {
+  column-gap: $component-spacing-desktop;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+
+  @media (max-width: $breakpoint-mobile-horizontal) {
+    display: block;
+  }
+
   .artist-info-table {
     align-items: baseline;
     column-gap: 175px;
@@ -30,6 +38,7 @@
       grid-template-columns: repeat(3, 1fr);
       padding-bottom: $container-padding;
       padding-top: $container-padding;
+      text-transform: uppercase;
 
       @media (max-width: $breakpoint-tablet-horizontal) {
         column-gap: $container-padding;
@@ -43,6 +52,7 @@
       &-label-desktop {
         display: block;
         opacity: 0.5;
+        text-transform: uppercase;
 
         @media (max-width: $breakpoint-mobile-horizontal) {
           display: none;
@@ -57,6 +67,7 @@
           display: block;
           opacity: 0.5;
           padding-bottom: $container-padding / 2;
+          text-transform: uppercase;
         }
       }
   

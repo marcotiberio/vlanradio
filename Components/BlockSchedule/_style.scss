@@ -154,6 +154,7 @@
             color: rgba($color: $green, $alpha: 0.5);
             opacity: 1;
             padding-bottom: $container-padding;
+            text-transform: uppercase;
 
             @media (max-width: $breakpoint-mobile-horizontal) {
               border-bottom: 0;

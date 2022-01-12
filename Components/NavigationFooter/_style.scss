@@ -1,6 +1,8 @@
 [is='flynt-navigation-footer'] {
-  p {
+  p,
+  a {
     color: $black;
+    text-transform: uppercase;
   }
 
   .container {
