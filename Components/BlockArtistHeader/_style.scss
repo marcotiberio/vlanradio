@@ -73,6 +73,7 @@
   
       &-title {
         color: $green;
+        text-transform: uppercase;
         width: fit-content;
 
         @media (max-width: $breakpoint-mobile-horizontal) {
@@ -120,7 +121,6 @@
         // @include reset-list;
         display: flex;
         flex-flow: row wrap;
-        gap: $container-padding;
         padding-left: 0;
 
         @media (max-width: $breakpoint-mobile-horizontal) {
@@ -129,6 +129,11 @@
     
         &-item {
           display: inline-block;
+          margin-right: $container-padding;
+
+          &:last-child {
+            margin-right: 0;
+          }
     
           &Link {
             color: $green;
