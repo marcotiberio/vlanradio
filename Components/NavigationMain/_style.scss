@@ -28,6 +28,7 @@
     .menu-link-live {
       align-items: center;
       display: flex;
+      text-transform: uppercase;
       width: calc(25vw + 10px);
 
       &::before {

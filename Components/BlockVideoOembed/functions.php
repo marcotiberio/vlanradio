@@ -44,37 +44,37 @@ function getACFLayout()
                 'type' => 'oembed',
                 'required' => 1
             ],
-            [
-                'label' => __('Options', 'flynt'),
-                'name' => 'optionsTab',
-                'type' => 'tab',
-                'placement' => 'top',
-                'endpoint' => 0
-            ],
-            [
-                'label' => '',
-                'name' => 'options',
-                'type' => 'group',
-                'layout' => 'row',
-                'sub_fields' => [
-                    [
-                        'label' => __('Size', 'flynt'),
-                        'name' => 'size',
-                        'type' => 'radio',
-                        'other_choice' => 0,
-                        'save_other_choice' => 0,
-                        'layout' => 'horizontal',
-                        'choices' => [
-                            'sizeSmall' => __('Small', 'flynt'),
-                            'sizeMedium' => __('Medium', 'flynt'),
-                            'sizeLarge' => __('Large (Default)', 'flynt'),
-                            'sizeHuge' => __('Huge', 'flynt'),
-                            'sizeFull' => __('Full', 'flynt'),
-                        ],
-                        'default_value' => 'sizeLarge',
-                    ],
-                ]
-            ]
+            // [
+            //     'label' => __('Options', 'flynt'),
+            //     'name' => 'optionsTab',
+            //     'type' => 'tab',
+            //     'placement' => 'top',
+            //     'endpoint' => 0
+            // ],
+            // [
+            //     'label' => '',
+            //     'name' => 'options',
+            //     'type' => 'group',
+            //     'layout' => 'row',
+            //     'sub_fields' => [
+            //         [
+            //             'label' => __('Size', 'flynt'),
+            //             'name' => 'size',
+            //             'type' => 'radio',
+            //             'other_choice' => 0,
+            //             'save_other_choice' => 0,
+            //             'layout' => 'horizontal',
+            //             'choices' => [
+            //                 'sizeSmall' => __('Small', 'flynt'),
+            //                 'sizeMedium' => __('Medium', 'flynt'),
+            //                 'sizeLarge' => __('Large (Default)', 'flynt'),
+            //                 'sizeHuge' => __('Huge', 'flynt'),
+            //                 'sizeFull' => __('Full', 'flynt'),
+            //             ],
+            //             'default_value' => 'sizeLarge',
+            //         ],
+            //     ]
+            // ]
         ]
     ];
 }

@@ -30,6 +30,7 @@
     &-header {
       color: $green;
       opacity: 0.5;
+      text-transform: uppercase;
     }
   }
 
@@ -56,12 +57,14 @@
         border-bottom: 1px solid $green;
         margin-bottom: $container-padding / 2;
         padding-bottom: $container-padding / 2;
+        text-transform: uppercase;
       }
     }
 
     &-header {
       color: $green;
       text-decoration: none;
+      text-transform: uppercase;
     }
   }
 }

@@ -1,4 +1,9 @@
 <div class="flyntComponent" is="flynt-block-artist-header">
+  {% if post.thumbnail %}
+    <div class="featuredImage">
+      {{ renderComponent('BlockImage', { image: post.thumbnail, noComponentSpacing: true }) }}
+    </div>
+  {% endif %}
   <div class="container fullWidthContainer">
     <div class="artist-info-table-label-desktop">
       <p class="artist-info-table-header-label-desktop">Artist</p>
@@ -24,21 +29,21 @@
         <p class="artist-info-table-header-label-mobile">Follow</p>
         {% if post.artistSoundcloud or post.artistInstagram or post.artistFacebook or post.artistMixcloud or post.artistBandcamp or post.artistWebsite %}
           <div class="artist-info-table-header-title">
-            <a class="artist-info-table-header-title-soundcloud" href="{{ post.artistSoundcloud|e }}" target="_blank"><span class="visuallyHidden">Soundcloud<span></a>
-            <a class="artist-info-table-header-title-instagram" href="{{ post.artistInstagram|e }}" target="_blank"><span class="artist-info-table-header-title-social-instagram">Instagram<span></a>
-            <a class="artist-info-table-header-title-facebook" href="{{ post.artistFacebook|e }}" target="_blank"><span class="artist-info-table-header-title-social-facebook">Facebook<span></a>
-            <a class="artist-info-table-header-title-mixcloud" href="{{ post.artistMixcloud|e }}" target="_blank"><span class="artist-info-table-header-title-social-mixcloud">Mixcloud<span></a>
-            <a class="artist-info-table-header-title-bandcamp" href="{{ post.artistBandcamp|e }}" target="_blank"><span class="artist-info-table-header-title-social-bandcamp">Bandcamp<span></a>
-            <a class="artist-info-table-header-title-website" href="{{ post.artistWebsite|e }}" target="_blank"><span class="artist-info-table-header-title-social-website">Website<span></a>
+            {% if post.artistSoundcloud %}<a class="artist-info-table-header-title-soundcloud" href="{{ post.artistSoundcloud|e }}" target="_blank"><span class="visuallyHidden">Soundcloud<span></a>{% endif %}
+            {% if post.artistInstagram %}<a class="artist-info-table-header-title-instagram" href="{{ post.artistInstagram|e }}" target="_blank"><span class="artist-info-table-header-title-social-instagram">Instagram<span></a>{% endif %}
+            {% if post.artistFacebook %}<a class="artist-info-table-header-title-facebook" href="{{ post.artistFacebook|e }}" target="_blank"><span class="artist-info-table-header-title-social-facebook">Facebook<span></a>{% endif %}
+            {% if post.artistMixcloud %}<a class="artist-info-table-header-title-mixcloud" href="{{ post.artistMixcloud|e }}" target="_blank"><span class="artist-info-table-header-title-social-mixcloud">Mixcloud<span></a>{% endif %}
+            {% if post.artistBandcamp %}<a class="artist-info-table-header-title-bandcamp" href="{{ post.artistBandcamp|e }}" target="_blank"><span class="artist-info-table-header-title-social-bandcamp">Bandcamp<span></a>{% endif %}
+            {% if post.artistWebsite %}<a class="artist-info-table-header-title-website" href="{{ post.artistWebsite|e }}" target="_blank"><span class="artist-info-table-header-title-social-website">Website<span></a>{% endif %}
           </div>
         {% endif %}
       </div>
     </div>
-    {% if post.thumbnail %}
+    {# {% if post.thumbnail %}
       <div class="featuredImage">
         {{ renderComponent('BlockImage', { image: post.thumbnail, noComponentSpacing: true }) }}
       </div>
-    {% endif %}
+    {% endif %} #}
     <div class="content centerMaxWidthContainer">
       {% if post.content %}
         <div class="artist-bio">

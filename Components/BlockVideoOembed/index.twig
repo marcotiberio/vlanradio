@@ -1,5 +1,5 @@
-<div class="flyntComponent flyntComponent--{{ options.size }} componentSpacing" is="flynt-block-video-oembed">
-  <div class="container{% if options.size != 'sizeFull' %} centerMaxWidthContainer{% endif %}">
+<div class="flyntComponent" is="flynt-block-video-oembed">
+  <div class="container">
     {% include 'Partials/_video.twig' ignore missing with {video: video, image: posterImage} only %}
   </div>
 </div>

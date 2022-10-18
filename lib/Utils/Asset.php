@@ -149,10 +149,10 @@ class Asset
         }
         if ($type === 'style') {
             global $wp_styles;
-            $repo =& $wp_styles;
+            $repo = & $wp_styles;
         } else {
             global $wp_scripts;
-            $repo =& $wp_scripts;
+            $repo = & $wp_scripts;
         }
 
         $asset = $repo->query($handle, 'registered');

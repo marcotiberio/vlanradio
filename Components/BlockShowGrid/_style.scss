@@ -37,6 +37,10 @@
         background-color: $black;
         cursor: pointer;
       }
+
+      .show-title {
+        text-transform: uppercase;
+      }
   
       .content {
         display: flex;
