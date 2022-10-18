@@ -86,7 +86,7 @@
 
   .content-link {
     background-color: $green;
-    display: flex;
+    display: block;
     flex: 1 1 100%;
     height: 100%;
     overflow: hidden;
@@ -97,7 +97,7 @@
     .content-image {
       filter: grayscale(100%) contrast(1) blur(0);
       flex: 1 0 100%;
-      height: 56.5vh;
+      height: 300px;
       margin-bottom: 0;
       mix-blend-mode: multiply;
       object-fit: cover;
@@ -105,13 +105,13 @@
       position: relative;
 
       @media (max-width: $breakpoint-tablet-horizontal) {
-        height: 34.5vh;
+        height: 250px;
         object-fit: cover;
         width: 100%;
       }
   
       @media (max-width: $breakpoint-mobile-horizontal) {
-        height: 43vh;
+        height: 250px;
         object-fit: cover;
         width: 100%;
       }

@@ -8,9 +8,9 @@
     <section class="post-main narrowWidthContainer">
       <div class="episode-header-labels">
         <p class="episode-header-labels-category">Episode</p>
-        <p class="episode-header-labels-category">Show</p>
+        {% if post.showEpisode %}<p class="episode-header-labels-category">Show</p>{% endif %}
         <p class="episode-header-labels-artist">Artist</p>
-        <p class="episode-header-labels-tags">Genre</p>
+        {% if post.terms('tag')  %}<p class="episode-header-labels-tags">Genre</p>{% endif %}
       </div>
       <div class="episode-header">
         {% if post.dateEpisode or post.timeEpisodeStart %}

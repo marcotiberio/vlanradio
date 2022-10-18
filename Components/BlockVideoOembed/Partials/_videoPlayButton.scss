@@ -27,7 +27,7 @@ $play-button-triangle-size: (
   &::before {
     @include pseudo-element-defaults();
     background-color: rgba($color-play-button, $background-opacity);
-    border: $border-width solid $colorBorder;
+    border: $border-width solid $green;
     border-radius: 50%;
     height: map-get($play-button-circle-diameter, 'mobile');
     margin-left: -(map-get($play-button-circle-diameter, 'mobile') / 2);
@@ -45,7 +45,7 @@ $play-button-triangle-size: (
   &::after {
     @include pseudo-element-defaults();
     border-bottom: (map-get($play-button-triangle-size, 'mobile') / 2) solid transparent;
-    border-left: map-get($play-button-triangle-size, 'mobile') solid $color-triangle;
+    border-left: map-get($play-button-triangle-size, 'mobile') solid $green;
     border-top: (map-get($play-button-triangle-size, 'mobile') / 2) solid transparent;
     height: 0;
     margin-left: -(map-get($play-button-triangle-size, 'mobile') / 2 * 0.9);
@@ -54,7 +54,7 @@ $play-button-triangle-size: (
 
     @media (min-width: $breakpoint-tablet) {
       border-bottom: (map-get($play-button-triangle-size, 'desktop') / 2) solid transparent;
-      border-left: map-get($play-button-triangle-size, 'desktop') solid $color-triangle;
+      border-left: map-get($play-button-triangle-size, 'desktop') solid $green;
       border-top: (map-get($play-button-triangle-size, 'desktop') / 2) solid transparent;
       margin-left: -(map-get($play-button-triangle-size, 'desktop') / 2 * 0.9);
       margin-top: -(map-get($play-button-triangle-size, 'desktop') / 2);

@@ -26,6 +26,13 @@
   }
 }
 
+.featuredImage {
+  img {
+    aspect-ratio: 1/1;
+    object-fit: cover;
+  }
+}
+
 .noResults {
   text-align: center;
 }

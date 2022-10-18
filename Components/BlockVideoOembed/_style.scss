@@ -1,27 +1,32 @@
 [is='flynt-block-video-oembed'] {
   @import 'Partials/video';
 
-  &.flyntComponent--sizeSmall {
-    .video {
-      max-width: 375px;
-    }
+  @media (min-width: $breakpoint-tablet-horizontal) {
+    margin-left: 25vw !important;
+    max-width: 75vw !important;
   }
 
-  &.flyntComponent--sizeMedium {
-    .video {
-      max-width: $content-max-width;
-    }
-  }
+  // &.flyntComponent--sizeSmall {
+  //   .video {
+  //     max-width: 375px;
+  //   }
+  // }
 
-  &.flyntComponent--sizeLarge {
-    .video {
-      max-width: 800px;
-    }
-  }
+  // &.flyntComponent--sizeMedium {
+  //   .video {
+  //     max-width: $content-max-width;
+  //   }
+  // }
 
-  &.flyntComponent--sizeFull {
-    .figure-caption {
-      margin-left: 0.625rem;
-    }
-  }
+  // &.flyntComponent--sizeLarge {
+  //   .video {
+  //     max-width: 800px;
+  //   }
+  // }
+
+  // &.flyntComponent--sizeFull {
+  //   .figure-caption {
+  //     margin-left: 0.625rem;
+  //   }
+  // }
 }

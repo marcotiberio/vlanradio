@@ -137,25 +137,13 @@
     
 
     &-image {
+      aspect-ratio: 1/1;
       filter: grayscale(100%) contrast(1) blur(0);
       flex: 1 0 100%;
-      height: 41vh;
       mix-blend-mode: multiply;
       object-fit: cover;
       opacity: 1;
       position: relative;
-
-      @media (max-width: $breakpoint-tablet-horizontal) {
-        height: 35.5vh;
-        object-fit: cover;
-        width: 100%;
-      }
-  
-      @media (max-width: $breakpoint-mobile-horizontal) {
-        height: 42.5vh;
-        object-fit: cover;
-        width: 100%;
-      }
     }
 
     &::before {
