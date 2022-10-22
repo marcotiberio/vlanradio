@@ -5,27 +5,26 @@
     color: $green;
     font-size: 65px;
     line-height: 65px;
-    padding: $container-padding-mobile 0;
+    padding: 0;
     text-transform: uppercase;
 
     @media (min-width: $breakpoint-tablet-horizontal) {
       font-size: 210px;
-      line-height: 210px;
+      line-height: 230px;
     }
   }
 
   .emailField {
     color: $green;
     font-size: 65px;
-    line-height: 50px;
+    line-height: 65px;
     outline: 0;
-    padding: $container-padding-mobile 0;
+    padding: 0;
     text-transform: uppercase;
 
     @media (min-width: $breakpoint-tablet-horizontal) {
       font-size: 210px;
-      height: 210px;
-      line-height: 180px;
+      height: 230px;
     }
   }
 

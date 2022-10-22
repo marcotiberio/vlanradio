@@ -28,8 +28,13 @@
     .menu-link-live {
       align-items: center;
       display: flex;
+      text-decoration: none;
       text-transform: uppercase;
       width: calc(25vw + 10px);
+
+      &:hover {
+        text-decoration: none !important;
+      }
 
       &::before {
         animation: none;
