@@ -6,13 +6,31 @@ use Flynt\FieldVariables;
 use Flynt\Utils\Options;
 use Timber\Timber;
 
-const POST_TYPE = 'episode';
+const POST_TYPE = 'post';
 
 add_filter('Flynt/addComponentData?name=GridRelatedEpisodes', function ($data) {
-
     $postType = POST_TYPE;
 
-    $data['items'] = Timber::get_posts($data[$postType]);
+    $data['taxonomies'] = $data['taxonomies'] ?: [];
+
+    $data['items'] = Timber::get_posts([
+        'post_status' => 'publish',
+        'post_type' => $postType,
+        'tax_query' => array(
+            array(
+                'taxonomy' => 'artist_taxonomy',
+                'field' => 'label',
+                'terms' => join(',', array_map(function ($taxonomy) {
+                    return $taxonomy->term_id;
+                }, $data['taxonomies'])),
+            )
+        ),
+        'posts_per_page' => $data['options']['columns'],
+        'ignore_sticky_posts' => 1,
+        'post__not_in' => array(get_the_ID())
+    ]);
+
+    $data['postTypeArchiveLink'] = get_post_type_archive_link($postType);
 
     return $data;
 });
@@ -60,18 +78,19 @@ function getACFLayout()
                 'instructions' => __('Want to add a headline? And a paragraph? Go ahead! Or just leave it empty and nothing will be shown.', 'flynt'),
             ],
             [
-                'label' => __('Episode', 'flynt'),
-                'name' => 'episode',
-                'type' => 'relationship',
-                'post_type' => [
-                    'post'
-                ],
-                'allow_null' => 0,
-                'multiple' => 0,
-                'return_format' => 'post_object',
-                'ui' => 1,
-                'required' => 0,
-            ]
+                'label' => __('Categories', 'flynt'),
+                'name' => 'taxonomies',
+                'type' => 'taxonomy',
+                'instructions' => __('Select 1 or more categories or leave empty to show from all posts.', 'flynt'),
+                'taxonomy' => 'artist_taxonomy',
+                'field_type' => 'multi_select',
+                'allow_null' => 1,
+                'multiple' => 1,
+                'add_term' => 0,
+                'save_terms' => 0,
+                'load_terms' => 0,
+                'return_format' => 'object'
+            ],
             // [
             //     'label' => __('Categories', 'flynt'),
             //     'name' => 'taxonomies',

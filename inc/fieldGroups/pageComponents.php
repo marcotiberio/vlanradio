@@ -17,6 +17,7 @@ add_action('Flynt/afterRegisterComponents', function () {
                 'layouts' => [
                     Components\BlockArchiveEpisodeSelect\getACFLayout(),
                     Components\BlockArtistSelect\getACFLayout(),
+                    Components\BlockCleverReach\getACFLayout(),
                     Components\BlockFilter\getACFLayout(),
                     Components\BlockImage\getACFLayout(),
                     Components\BlockLatestEpisodeSelect\getACFLayout(),

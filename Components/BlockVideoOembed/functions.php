@@ -9,7 +9,7 @@ add_filter('Flynt/addComponentData?name=BlockVideoOembed', function ($data) {
     $data['video'] = Oembed::setSrcAsDataAttribute(
         $data['oembed'],
         [
-            'autoplay' => 'true'
+            'autoplay' => 'false'
         ]
     );
 

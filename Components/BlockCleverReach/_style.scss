@@ -1,0 +1,128 @@
+[is='flynt-block-clever-reach'] {
+  font-family: 'UniversLT', Helvetica, Arial, sans-serif !important;
+
+  ::placeholder {
+    color: $green;
+    font-family: 'UniversLT', Helvetica, Arial, sans-serif !important;
+    font-size: 65px;
+    line-height: 65px;
+    padding: 0;
+    text-transform: uppercase;
+
+    @media (min-width: $breakpoint-tablet-horizontal) {
+      font-size: 210px;
+      line-height: 230px;
+    }
+  }
+
+  .cr_body {
+    background-color: transparent;
+    color: $green;
+  }
+
+  .cr_page {
+    max-width: 100vw;
+  }
+
+  .editable_content {
+    align-content: center;
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  .cr_form-component--email {
+    font-family: 'UniversLT', Helvetica, Arial, sans-serif !important;
+    width: 100%;
+
+    .cr_ipe_item label {
+      display: none !important;
+    }
+  }
+
+  .cr_ipe_item {
+    margin: 0;
+    padding: 0;
+  }
+
+  .cr_ipe_item [type='email'] {
+    background: transparent;
+    border: 1px solid $black;
+    border-radius: 0;
+    color: $green;
+    font-family: 'UniversLT', Helvetica, Arial, sans-serif !important;
+    font-size: 65px;
+    line-height: 65px;
+    outline: 0;
+    padding: 0;
+    text-transform: uppercase;
+
+    @media (min-width: $breakpoint-tablet-horizontal) {
+      font-size: 210px;
+      height: 230px;
+    }
+  }
+
+  .group-submit {
+    align-items: flex-start;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    width: 100%;
+
+    @media (max-width: $breakpoint-mobile-horizontal) {
+      justify-content: space-between;
+    }
+
+    .cr_form-component--text {
+      font-family: 'UniversLT', Helvetica, Arial, sans-serif !important;
+  
+      .label-text {
+        display: inline-block !important;
+        font-size: 20px;
+        margin: 0;
+        padding-left: 0;
+        position: relative;
+        text-transform: uppercase;
+      }
+    }
+  
+    .cr_button {
+      appearance: none;
+      background-color: transparent;
+      border: 0;
+      border-radius: 0;
+      color: $green;
+      cursor: pointer;
+      display: inline-block;
+      font-family: 'UniversLT', Helvetica, Arial, sans-serif !important;
+      font-size: 20px;
+      line-height: inherit;
+      margin-bottom: 0;
+      margin-left: 100px;
+      margin-right: 0;
+      margin-top: 0;
+      padding: 0;
+      text-align: center;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: none;
+      user-select: none;
+
+      @media (max-width: $breakpoint-mobile-horizontal) {
+        margin-left: 0;
+      }
+    }
+  }
+
+  .badge {
+    display: none;
+  }
+
+  .item-recaptcha {
+    width: 100%;
+  }
+
+  .cr_form-component--submit {
+    width: fit-content;
+  }
+}

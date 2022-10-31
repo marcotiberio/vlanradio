@@ -12,11 +12,19 @@
             <a class="noHoverEffect" href="{{ item.link }}" title="{{ item.title }}" aria-hidden="true" tabindex="-1">
               <div class="content">
                 <p class="content-title">{{ item.title }}</p>
-                {% if item.thumbnail %}
+                <div class="featuredImage">
+                <figure class="figure">
+                <img class="figure-image lazyload"
+                  src="{{ item.thumbnail.src|resize(16) }}"
+                  data-srcset="{{function('wp_get_attachment_image_srcset', item.thumbnail.id)}}"
+                  data-sizes="auto">
+                  </figure>
+                </div>
+                {# {% if item.thumbnail %}
                   <div class="featuredImage">
                     {{ renderComponent('BlockImage', { image: item.thumbnail, noComponentSpacing: true }) }}
                   </div>
-                {% endif %}
+                {% endif %} #}
                 {# <div class="content-footer">
                   <span>{{ item.preview.read_more(false) }}</span>
                   <span class="button button--link" >{{ labels.readMore }}</span>

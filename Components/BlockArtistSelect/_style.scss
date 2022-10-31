@@ -104,6 +104,7 @@
         }
 
         &-title {
+          text-decoration: none !important;
           text-transform: uppercase;
         }
   
@@ -121,10 +122,14 @@
     }
   }
 
-  .grid-item:hover .figure-image {
-    filter: grayscale(0) contrast(1) blur(0);
-    mix-blend-mode: initial;
-  }
+  .grid-item:hover {
+    text-decoration: none;
+
+    .figure-image {
+      filter: grayscale(0) contrast(1) blur(0);
+      mix-blend-mode: initial;
+    }
+  } 
 
   .figure {
     background-color: $green;

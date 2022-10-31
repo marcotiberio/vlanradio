@@ -15,7 +15,7 @@
     </footer>
     {# <section class="post-related">
       <h1>Episodes</h1>
-      {{ renderComponent('GridPostsArchive', {'preContentHtml': '<h1>' ~ __('Episodes') ~ '</h1>','taxonomies': post.terms('tag') }) }}
+      {{ renderComponent('GridPostsArchive', {'preContentHtml': '<h1>' ~ __('Episodes') ~ '</h1>','taxonomies': post.terms('artist_taxonomy') }) }}
     </section> #}
   </article>
 {% endblock %}
